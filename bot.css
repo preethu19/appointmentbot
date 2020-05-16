@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: lightgray;
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    padding: 10px;
+}
+
+.placeholder{
+    background-color: yellow;
+    background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    height: 443px;
+}
+
+.fit-image{
+    width: 100%;
+    object-fit: cover;
+    /* height: 300px; only if you want fixed height */
+}
+
+.pic{
+    padding: 0px;
+}
+
+.click{
+    color: black;
+}
+
+.start{
+    color: white;
+    background-color: #ffbf00;
+    border: 5px solid #3d4a41;
+    border-radius: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.features{
+    padding: 10px;
+}
+.bot{
+    border-radius: 200px;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+.box{
+    box-model: border-box;
+    border: 20px solid transparent;
+    background-clip:padding-box;
+  }
+
+.card{
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+.card h1{
+    text-align: center;
+    text-decoration: dashed;
+}
+
+.navbar{
+    margin: 0%;
+}
+
+#Toolchain{
+    background-color: black;
+    color: #ffbf00;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+}
+
+.card1{
+    background-color:grey;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+#Team{
+    background-color: black;
+    color: #ffbf00;
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+}
+
+.jhead{
+    padding: 20px;
+    font-family:'Roboto', sans-serif;
+    font-size: 70px;
+    color: white;
+}
+
+.placeholder p{
+    padding: 0px 20px 20px 20px;
+    font-size: 30px;
+    color: gray;
+}
