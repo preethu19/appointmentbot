@@ -75,7 +75,8 @@ exports.webhook = functions.https.onRequest((request, response) => {
             
             break;
             case 'bookAppointment':
-
+                date = reformatDate(params['date']);
+                params['date'] = date[0];
                 db.collection('appointments').get()
                     .then((querySnapshot) => {
     
