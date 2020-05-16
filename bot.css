@@ -104,10 +104,22 @@ p{
     font-family:'Roboto', sans-serif;
     font-size: 70px;
     color: white;
+    word-break: break-word;
 }
 
 .placeholder p{
     padding: 0px 20px 20px 20px;
     font-size: 30px;
     color: gray;
+    word-break: break-word;
+}
+
+ul{
+    padding: 10px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.team{
+    padding-bottom: 50px;
 }
