@@ -8,15 +8,9 @@
     <title>Appointment Scheduler</title>
 
     <!-- bootstrap CSS cdn -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- bootstrap JS cdn -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- include specific CSS for the page -->
-    <!-- <link rel="stylesheet" href="chatbot.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- The script to our dialogflow chatbot -->
     <script type="text/javascript" id="botcopy-embedder-d7lcfheammjct" class="botcopy-embedder-d7lcfheammjct"
         data-botId="5eabf55a4766060008263527">
@@ -31,7 +25,7 @@
 
 <body>
     <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
+        <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -49,22 +43,20 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#gets">Get Started! <span class="sr-only">(current)</span></a></li>
                     <li><a href="#Toolchain">Toolchain</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-left">
                     <li><a href="#Team">Our Team</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
-    </nav>
+    </nav> 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-5 placeholder">
+            <div class="col-md-5 col-sm-5 col-xs-12 placeholder">
                 <div class="jhead">
                     Schedule your appointments on the go!
                 </div>
                 <p>Our chatbot's got it all covered.</p>
             </div>
-            <div class="col-md-7 pic">
+            <div class="col-md-7 col-sm-7 pic">
                 <img src="https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
                     alt="office" class="fit-image img-responsive">
             </div>
@@ -153,6 +145,8 @@
             </div>
         </div>
     </div>
+    <!-- bootstrap JS cdn -->
+
 </body>
 
 </html>

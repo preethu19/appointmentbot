@@ -102,16 +102,16 @@ p{
 .jhead{
     padding: 20px;
     font-family:'Roboto', sans-serif;
-    font-size: 70px;
+    font-size: 5vmax;
     color: white;
-    word-break: break-word;
+    /* word-break: break-word; */
 }
 
 .placeholder p{
     padding: 0px 20px 20px 20px;
-    font-size: 30px;
-    color: gray;
-    word-break: break-word;
+    font-size: 2vmax;
+    color: white;
+    /* word-break: break-word; */
 }
 
 ul{
@@ -123,3 +123,10 @@ ul{
 .team{
     padding-bottom: 50px;
 }
+
+@media (max-width: 768px) {
+    .placeholder{
+      max-height: 200px;
+    }
+  }
+
