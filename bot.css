@@ -12,8 +12,8 @@ p{
 }
 
 .placeholder{
-    background-color: yellow;
-    background-image: url("https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-color: #2393BA;
+    background-image: url("https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
     height: 443px;
 }
 
@@ -25,6 +25,9 @@ p{
 
 .pic{
     padding: 0px;
+    background-color: #2393BA;
+    background-image: url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    height: 443px;
 }
 
 .click{
@@ -33,7 +36,7 @@ p{
 
 .start{
     color: white;
-    background-color: #ffbf00;
+    background-color: #2393BA;
     border: 5px solid #3d4a41;
     border-radius: 30px;
     font-family: 'Raleway', sans-serif;
@@ -79,7 +82,7 @@ p{
 
 #Toolchain{
     background-color: black;
-    color: #ffbf00;
+    color: #2B9E99;
     text-align: center;
     font-family:'Roboto', sans-serif;
 }
@@ -94,7 +97,7 @@ p{
 
 #Team{
     background-color: black;
-    color: #ffbf00;
+    color: #2B9E99;
     text-align: center;
     font-family:'Roboto', sans-serif;
 }
@@ -102,15 +105,15 @@ p{
 .jhead{
     padding: 20px;
     font-family:'Roboto', sans-serif;
-    font-size: 5vmax;
-    color: white;
+    font-size: 4vmax;
+    color: #3F3F3F;
     /* word-break: break-word; */
 }
 
 .placeholder p{
     padding: 0px 20px 20px 20px;
     font-size: 2vmax;
-    color: white;
+    color: #3F3F3F;
     /* word-break: break-word; */
 }
 
