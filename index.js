@@ -12,7 +12,7 @@ let db = admin.firestore();
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 exports.webhook = functions.https.onRequest((request, response) => {
-
+    
     console.log("request.body.queryResult.outputContexts.parameters: ",request.body.queryResult.outputContexts[0].parameters);
     console.log("request.body.queryResult.parameters: ",request.body.queryResult.parameters);
 
@@ -258,6 +258,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
       'Dr. Raghu Acharekar': "डॉ। रघु आचरेकर",
       'Dr. Rani Adhya': "डॉ। रानी अधिया",
       'Dr. Rakesh Sharma': "डॉ। राकेश शर्मा",
+      'Dr. Reshma Patil': "डॉ  रेशमा पाटिल",
       'Dr. Ruhi Sirasikar': "डॉ। रूही सिरासिकर",
       'Dr. Sadhana Parikh': "डॉ। साधना पारिख",
       'Dr. Sahadeva Gupta': "डॉ। सहदेव गुप्ता",
@@ -268,6 +269,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
       'Dr. Sharad Kamath': "डॉ। शरद कामथ",
       'Dr. Sharad Ojha': "डॉ। शरद ओझा",
       'Dr. Shinu Ayyangar': "डॉ। शिनू अयंगर",
+      'Dr. Shriram Shetty': "डॉ श्रीराम शेट्टी",
       'Dr. Shristi Jayavant': "डॉ। श्रीस्ती जयवंत",
       'Dr. Shruti Seth': "डॉ। श्रुति सेठ",
       'Dr. Steve Shawn': "डॉ। स्टीव शॉन",
@@ -319,11 +321,13 @@ exports.webhook = functions.https.onRequest((request, response) => {
       '6:00 pm': 'शाम 6 बजे',
       '6:30 pm': 'शाम 6.30 बजे',
       }
+    function getotp(min=1000, max=10000) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
 
 
-
-    var time = ''
-    var date = ''
+    var time = '';
+    var date = '';
     var doctors = [];
     var appointments = [];
     var bookeddoctors = [];
@@ -335,10 +339,11 @@ exports.webhook = functions.https.onRequest((request, response) => {
     var availdates = [];
     var count = 0;
     var fulfillmentMessages = [];
-    var timelist = []
-    var success = false
-    var availdoctorshin = []
-    var time_slotshin = []
+    var timelist = [];
+    var success = false;
+    var availdoctorshin = [];
+    var time_slotshin = [];
+    var otp;
 
 
 
@@ -395,7 +400,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
               ]
             }
             else if(language==='hi'){
-              fulfillmentText = "नमस्कार! मैं आपका डॉक्टर बॉट हूँ! आप क्या करना पसंद करते हैं\nएक अपॉइंटमेंट लें\nअपॉइंटमेंट रद्द करें\nअपॉइंटमेंट्स\n"
+              fulfillmentText = "नमस्कार! मैं आपका डॉक्टर बॉट हूँ! आप क्या करना पसंद करते हैं\nएक अपॉइंटमेंट लें\nअपॉइंटमेंट रद्द करें\nनियुक्ति दिखाएं\n"
               fulfillmentMessages = [
                   {
                     "platform": "ACTIONS_ON_GOOGLE",
@@ -451,6 +456,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
             break;
 
         case 'enteredChoice':
+           
             if(params['choice']==='specialization'){
               if(language==='en'){
                 fulfillmentText = 'Enter the specialization you are looking for'
@@ -482,6 +488,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
             
         
         case 'chosenPreference':
+          
           if(params['symptoms'].length>0){
             params['specialization'] = assign_specialization(params['symptoms'])
         }
@@ -731,6 +738,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         }
                       ]
                 }
+              }
                 else{
                   if(language==='en'){
                     fulfillmentText = 'You can book appointments only for next 7 days\nEnter valid date\n'
@@ -739,7 +747,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
                     fulfillmentText = 'आप केवल अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nमान्य दिनांक दर्ज करें\n'
                   } 
                 }
-            }
+            
           }
             response.send({
                 fulfillmentText: fulfillmentText,
@@ -3022,6 +3030,60 @@ exports.webhook = functions.https.onRequest((request, response) => {
         }
             break;
 
+        case 'genotp':
+          otp = getotp();
+          var msg = 'Your OTP is '+otp+' Do not share it with anyone\n'
+          number = params['number'];
+          data = {
+            "number" : number,
+            "otp": otp,
+          }
+          db.collection('otps').where('number', '==', params['number']).get()
+          .then(snapshot => {
+            snapshot.forEach(doc => {
+              db.collection('otps').doc(doc.id).delete();
+            })
+            db.collection('otps').add(data)
+            .then(()=>{
+              var messagebird = require('messagebird')('Fw5SInNZf55PXGGXPIC1o7lvU');
+
+            var params = {
+              'originator': 'MessageBird',
+              'recipients': [
+                '+917353782898'
+            ],
+              'body': msg
+            };
+
+            messagebird.messages.create(params, function (err, response) {
+              if (err) {
+                return console.log(err);
+              }
+              console.log(response);
+            });
+              if(language==='en'){
+                fulfillmentText = 'OTP is sent to '+number+'\n enter the OTP('+otp+')\n'
+              }
+              else if(language==='hi'){
+                fulfillmentText = 'OTP '+number+' पर भेजा जाता है\n OTP दर्ज करें('+otp+')\n'
+              }
+              response.send({
+                fulfillmentText: fulfillmentText
+              });
+              return null;
+            })
+            .catch(err => {
+              console.log('Error getting documents', err);
+          });
+            return null;
+          })
+          .catch(err => {
+            console.log('Error getting documents', err);
+        });
+          
+          
+          break;
+
         case 'bookAppointment':
             if(params['symptoms'].length>0){
                 params['specialization'] = assign_specialization(params['symptoms'])
@@ -3030,8 +3092,26 @@ exports.webhook = functions.https.onRequest((request, response) => {
             date = reformatDate(params['date']);
             params['time'] = time[1];
             params['date'] = date[0];
-            db.collection('appointments').where('doctor', '==', params['doctor']).where('time', '==', params['time']).where('date', '==', params['date']).where('specialization', '==', params['specialization']).get()
+            db.collection('otps').where('number', '==', params['number']).where('otp', '==', params['otp']).get()
             .then(snapshot => {
+              if(snapshot.empty){
+                if(language==='en'){
+                  fulfillmentText = 'Incorrect OTP Enter a vaild OTP\n'
+                }
+                else if(language==='hi'){
+                  fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
+                }
+                response.send({
+                  fulfillmentText : fulfillmentText
+                })
+                
+              }
+              else{
+                snapshot.forEach(doc => {
+                  db.collection('otps').doc(doc.id).delete();
+                })
+                db.collection('appointments').where('doctor', '==', params['doctor']).where('time', '==', params['time']).where('date', '==', params['date']).where('specialization', '==', params['specialization']).get()
+                .then(snapshot => {
                 if (snapshot.empty) {
                     db.collection('appointments').add(params)
                     if(language === 'en'){
@@ -3175,10 +3255,33 @@ exports.webhook = functions.https.onRequest((request, response) => {
             .catch(err => {
                 console.log('Error getting documents', err);
             });
+              }
+              return null;
+            })
+              .catch(err => {
+                console.log('Error getting documents', err);
+            });
             break;
 
             case 'showSchedule':
-                
+              db.collection('otps').where('number', '==', params['number']).where('otp', '==', params['otp']).get()
+              .then(snapshot => {
+                if(snapshot.empty){
+                  if(language==='en'){
+                    fulfillmentText = 'Incorrect OTP Enter a vaild OTP\n'
+                  }
+                  else if(language==='hi'){
+                    fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
+                  }
+                  response.send({
+                    fulfillmentText : fulfillmentText
+                  })
+                  
+                }
+                else{
+                  snapshot.forEach(doc => {
+                    db.collection('otps').doc(doc.id).delete();
+                  })
                 db.collection('appointments').where('number', '==', params['number']).get()
                 .then(snapshot => {
                     if (snapshot.empty) {
@@ -3347,7 +3450,13 @@ exports.webhook = functions.https.onRequest((request, response) => {
                     console.log('Error getting documents', err);
                 });
     
-                break;
+              }
+              return null;
+            })
+              .catch(err => {
+                console.log('Error getting documents', err);
+            });
+            break;
 
             case 'cancelAppointment':
                 time = reformatDate(params['time']);
@@ -3355,7 +3464,24 @@ exports.webhook = functions.https.onRequest((request, response) => {
                 params['time'] = time[1];
                 params['date'] = date[0];
                 console.log(params);
-                
+                db.collection('otps').where('number', '==', params['number']).where('otp', '==', params['otp']).get()
+              .then(snapshot => {
+                if(snapshot.empty){
+                  if(language==='en'){
+                    fulfillmentText = 'Incorrect OTP Enter a vaild OTP\n'
+                  }
+                  else if(language==='hi'){
+                    fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
+                  }
+                  response.send({
+                    fulfillmentText : fulfillmentText
+                  })
+                  
+                }
+                else{
+                  snapshot.forEach(doc => {
+                    db.collection('otps').doc(doc.id).delete();
+                  })
                 db.collection('appointments').where('date', '==', params['date']).where('time', '==', params['time']).where('number', '==', params['number']).get()
                 .then(snapshot => {
                     var fulfillmentText = ''
@@ -3523,7 +3649,13 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             response.send({
                                 fulfillmentText: "something went wrong when reading from database"
                             })
-                        }) 
+                        })
+                      }
+                      return null;
+                    })
+                      .catch(err => {
+                        console.log('Error getting documents', err);
+                    }); 
                 break;
 
         default:
