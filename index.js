@@ -321,6 +321,152 @@ exports.webhook = functions.https.onRequest((request, response) => {
       '6:00 pm': 'शाम 6 बजे',
       '6:30 pm': 'शाम 6.30 बजे',
       }
+
+      getSpanish = {
+        'Allergist': "Alergista",
+        'Anesthesiologist': "Anestesiólogo",
+        'Audiologist': "Audiólogo",
+        'Cardiologist': "Cardiólogo",
+        'Dentist': "dentista",
+        'Dermatologist': "Dermatólogo",
+        'ENT Specialist': "ENT Especialista",
+        'Endrocinologist': "Endocrinólogo",
+        'Epidemiologist': "Epidemiólogo",
+        'General Physician': "Médico general",
+        'Gynecologist': "Ginecólogo",
+        'Immunologist': "Inmunólogo",
+        'Medical Geneticist': "Genetista Médico",
+        'Neurologist': "Neurólogo",
+        'Neurosurgeon': "Neurocirujano",
+        'Obstetrician': "Obstetra",
+        'Oncologist': "Oncólogo",
+        'Orthopedic Surgeon': "Cirujano ortopédico",
+        'Pediatrician': "Pediatra",
+        'Physiologist': "Fisiólogo",
+        'Plastic Surgeon': "Cirujano plástico",
+        'Podiatrist': "Podólogo",
+        'Psychiatrist': "Psiquiatra",
+        'Rheumatologist': "Reumatólogo",
+        'Surgeon': "Cirujano",
+        'Urologist': "Urólogo",
+        '10:00 am': 'a las 10 de la mañana',
+        '10:30 am': 'a las 10:30 de la mañana',
+        '11:00 am': 'a las 11 de la mañana',
+        '11:30 am': 'a las 11:30 de la mañana',
+        '12:00 pm': '12 de la tarde',
+        '12:30 pm': '12:30 de la tarde',
+        '1:00 pm': '1 de la tarde',
+        '1:30 pm': '1:30 de la tarde',
+        '2:00 pm': '2 de la tarde',
+        '2:30 pm': '2:30 de la tarde',
+        '3:00 pm': '3 de la tarde',
+        '3:30 pm': '3:30 de la tarde',
+        '4:00 pm': '4 de la tarde',
+        '4:30 pm': '4:30 de la tarde',
+        '5:00 pm': '5 de la noche',
+        '5:30 pm': '5:30 de la noche',
+        '6:00 pm': '6 de la noche',
+        '6:30 pm': '6:30 de la noche',
+        }
+        
+        getGerman = {
+          'Allergist': "Allergologe",
+          'Anesthesiologist': "Anästhesist",
+          'Audiologist': "Audiologe",
+          'Cardiologist': "Kardiologe",
+          'Dentist': "Zahnarzt",
+          'Dermatologist': "Dermatologe",
+          'ENT Specialist': "HNO-Spezialist",
+          'Endrocinologist': "Endokrinologe",
+          'Epidemiologist': "Epidemiologe",
+          'General Physician': "Arzt",
+          'Gynecologist': "Gynäkologe",
+          'Immunologist': "Immunologe",
+          'Medical Geneticist': "Medizinischer Genetiker",
+          'Neurologist': "Neurologe",
+          'Neurosurgeon': "Neurochirurg",
+          'Obstetrician': "Geburtshelfer",
+          'Oncologist': "Onkologe",
+          'Orthopedic Surgeon': "Orthopäde",
+          'Pediatrician': "Kinderarzt",
+          'Physiologist': "Physiologe",
+          'Plastic Surgeon': "Schönheitschirurg",
+          'Podiatrist': "Podologe",
+          'Psychiatrist': "Psychiater",
+          'Rheumatologist': "Rheumatologe",
+          'Surgeon': "Chirurg",
+          'Urologist': "Urologe",
+          '10:00 am': '10.00 Uhr morgens',
+          '10:30 am': '10.30 Uhr morgens',
+          '11:00 am': '11.00 Uhr morgens',
+          '11:30 am': '11.30 Uhr morgens',
+          '12:00 pm': '12.00 Uhr mittags',
+          '12:30 pm': '12.30 Uhr nachmittags',
+          '1:00 pm': '1.00 Uhr nachmittags',
+          '1:30 pm': '1.30 Uhr nachmittags',
+          '2:00 pm': '2.00 Uhr nachmittags',
+          '2:30 pm': '2.30 Uhr nachmittags',
+          '3:00 pm': '3.00 Uhr nachmittags',
+          '3:30 pm': '3.30 Uhr nachmittags',
+          '4:00 pm': '4.00 Uhr nachmittags',
+          '4:30 pm': '4.30 Uhr nachmittags',
+          '5:00 pm': '5.00 Uhr abends',
+          '5:30 pm': '5.30 Uhr abends',
+          '6:00 pm': '6.00 Uhr abends',
+          '6:30 pm': '6.30 Uhr abends',
+          }
+          
+          getFrench = {
+                  'Allergist': "Allergologue",
+                  'Anesthesiologist': "Anesthésiste",
+                  'Audiologist': "Audiologiste",
+                  'Cardiologist': "Cardiologue",
+                  'Dentist': "Dentiste",
+                  'Dermatologist': "Dermatologue",
+                  'ENT Specialist': "Spécialiste ORL",
+                  'Endrocinologist': "Endocrinologue",
+                  'Epidemiologist': "Épidémiologiste",
+                  'General Physician': "Médecin généraliste",
+                  'Gynecologist': "Gynécologue",
+                  'Immunologist': "Immunologiste",
+                  'Medical Geneticist': "Génésiste médical",
+                  'Neurologist': "Neurologue",
+                  'Neurosurgeon': "Neurochirurgien",
+                  'Obstetrician': "Obstétricien",
+                  'Oncologist': "Oncologiste",
+                  'Orthopedic Surgeon': "Chirurgien orthopédique",
+                  'Pediatrician': "Pédiatre",
+                  'Physiologist': "Physiologiste",
+                  'Plastic Surgeon': "Chirurgien plastique",
+                  'Podiatrist': "Podologue",
+                  'Psychiatrist': "Psychiatre", 
+                  'Rheumatologist': "Rhumatologue", 
+                  'Surgeon': "Chirurgien", 
+                  'Urologist': "Urologue", 
+                  '10:00 am': "10h00", 
+                  '10:30 am': "10h30",
+                  '11:00 am': "11h00",
+                  '11:30 am': "11h30",
+                  '12:00 pm': "12h00",
+                  '12:30 pm': "12h30",
+                  '1:00 pm': "13h00",
+                  '1:30 pm': "13h30",
+                  '2:00 pm': "14h00",
+                  '2:30 pm': "14h30",
+                  '3:00 pm': "15h00",
+                  '3:30 pm': "15h30",
+                  '4:00 pm': "16h00",
+                  '4:30 pm': "16h30",
+                  '5:00 pm': "17h00",
+                  '5:30 pm': "17h30",
+                  '6:00 pm': "18h00",
+                  '6:30 pm': "18h30",
+                }
+
+
+
+
+
     function getotp(min=1000, max=10000) {
       return Math.floor(Math.random() * (max - min)) + min;
     }
@@ -448,6 +594,160 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                 ]
               }
+              else if(language==='de'){
+                fulfillmentText = "Hallo! Ich bin dein Doktor Bot! Was möchten Sie tun? \n Termine festlegen \n Termine absagen \n Termine anzeigen \n"
+            fulfillmentMessages = [
+                {
+                  "platform": "ACTIONS_ON_GOOGLE",
+                  "simpleResponses": {
+                    "simpleResponses": [
+                      {
+                        "textToSpeech": "Hallo! Ich bin dein Doktor Bot! Was möchtest du tun"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "quickReplies": {
+                    "title": "Hallo! Ich bin dein Doktor Bot! Was möchtest du tun",
+                    "quickReplies": [
+                      "Vereinbaren Sie einen Termin",
+                      "Stornieren Sie einen Termin",
+                      "Termine anzeigen"
+                    ]
+                  },
+                  "platform": "FACEBOOK"
+                },
+                {
+                  "platform": "ACTIONS_ON_GOOGLE",
+                  "suggestions": {
+                    "suggestions": [
+                      {
+                        "title": "Vereinbaren Sie einen Termin"
+                      },
+                      {
+                        "title": "Stornieren Sie einen Termin"
+                      },
+                      {
+                        "title": "Termine anzeigen"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "text": {
+                    "text": [
+                      fulfillmentText
+                    ]
+                  }
+                }
+              ]
+
+              }
+              else if(language==='es'){
+                fulfillmentText = "¡Hola! Soy tu doctor bot! ¿Qué te gusta hacer?\nConcertar una cita\nCancelar una cita\nMostrar citas\n"
+            fulfillmentMessages = [
+                {
+                  "platform": "ACTIONS_ON_GOOGLE",
+                  "simpleResponses": {
+                    "simpleResponses": [
+                      {
+                        "textToSpeech": "¡Hola! Soy tu doctor bot! ¿Qué te gusta hacer?"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "quickReplies": {
+                    "title": "¡Hola! Soy tu doctor bot! ¿Qué te gusta hacer?",
+                    "quickReplies": [
+                      "Concertar una cita",
+                      "Cancelar una cita",
+                      "Mostrar citas"
+                    ]
+                  },
+                  "platform": "FACEBOOK"
+                },
+                {
+                  "platform": "ACTIONS_ON_GOOGLE",
+                  "suggestions": {
+                    "suggestions": [
+                      {
+                        "title": "Concertar una cita"
+                      },
+                      {
+                        "title": "Cancelar una cita"
+                      },
+                      {
+                        "title": "Mostrar citas"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "text": {
+                    "text": [
+                      fulfillmentText
+                    ]
+                  }
+                }
+              ]
+              }
+              else if(language==='fr'){
+                fulfillmentText = "salut! Je suis ton docteur bot! Qu'aimez-vous faire\nDéfinir un rendez-vous\nAnnuler un rendez-vous\nAfficher les rendez-vous\n"
+                fulfillmentMessages = [
+                  {
+                    "platform": "ACTIONS_ON_GOOGLE",
+                    "simpleResponses": {
+                      "simpleResponses": [
+                        {
+                          
+        "textToSpeech": "salut! Je suis ton docteur bot! Qu'aimez-vous faire"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "quickReplies": {
+                      
+          "title": "salut! Je suis ton docteur bot! Qu'aimez-vous faire", 	
+                      "quickReplies": [
+                        "Fixer un rendez",
+                        "Annuler un rendez-vous",
+                        "Afficher les rendez-vous",
+                      ]
+                    },
+                    "platform": "FACEBOOK"
+                  },
+                  {
+                    "platform": "ACTIONS_ON_GOOGLE",
+                    "suggestions": {
+                      "suggestions": [
+                        {
+                          
+        "title": "Fixer un rendez"
+                        },
+                        {
+                          
+        "title": "Annuler un rendez-vous"
+                        },
+                        {
+                          
+        "title": "Afficher les rendez-vous"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "text": {
+                      "text": [
+                        fulfillmentText
+                      ]
+                    }
+                  }
+                ]	
+  
+              }
               response.send({
                 fulfillmentText: fulfillmentText,
                 fulfillmentMessages : fulfillmentMessages
@@ -463,7 +763,16 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
                else if(language==='hi'){
                 fulfillmentText = 'वह विशेषज्ञता दर्ज करें जिसकी आपको तलाश है'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie die gewünschte Spezialisierung ein'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese la especialización que busca'
               } 
+              else if(language==='fr'){
+                fulfillmentText = 'Entrez la spécialisation que vous recherchez'
+              }  
             }
             else if(params['choice']==='symptoms'){
               if(language==='en'){
@@ -472,6 +781,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'आपके द्वारा देखे गए लक्षण क्या हैं?'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Was sind die Symptome, die Sie bemerkt haben?'
+              }
+              else if(language==='es'){
+                fulfillmentText = '¿Cuáles son los síntomas que notó?'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Quels sont les symptômes que vous avez remarqués?'
+              }
             }
             else{
               if(language==='en'){
@@ -479,7 +797,16 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'उपलब्ध विकल्प से चुनें'
-              }  
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Wählen Sie aus den verfügbaren Optionen'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Elige entre las opciones disponibles'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Choisissez parmi les options disponibles'
+              }
             }
             response.send({
                 fulfillmentText: fulfillmentText
@@ -499,6 +826,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'आप अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nदिनांक दर्ज करें\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können Termine für die nächsten 7 Tage buchen \n Geben Sie das Datum ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Vous pouvez prendre rendez-vous pour les 7 prochains jours\nEntrez la date\n'
+              }
             }
             else if( params['preference']==='time'){
               if(language==='en'){
@@ -506,6 +842,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = '30 मिनट के अंतराल में सुबह 10:00 से शाम 7:00 बजे के बीच का समय दर्ज करें (उदा: सुबह 11 बजे, 11:30 बजे)\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie die Zeit zwischen 10:00 und 19:00 Uhr in Intervallen von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr)\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese la hora entre las 10:00 a.m. y las 7:00 p.m.en intervalos de 30 minutos (Ej .: 11 a.m., 11:30 a.m.)\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "Entrez l'heure entre 10h00 et 19h00 par intervalles de 30 minutes (Ex: 11h00, 11h30)\n"
               } 
             }
             else if( params['preference']==='doctor'){
@@ -515,6 +860,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'एक डॉक्टर का नाम दर्ज करें जो एक '+getHindi[params['specialization']]+' है\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie den Namen des Arztes ein, der a '+getGerman[params['specialization']]+'\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese el nombre del médico que es '+getSpanish[params['specialization']]+'\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Entrez le nom du médecin qui est '+getFrench[params['specialization']]+'\n'
+              }
             }
             else{
               if(language==='en'){
@@ -522,6 +876,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'उपलब्ध विकल्प से चुनें'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Wählen Sie aus den verfügbaren Optionen'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Elige entre las opciones disponibles'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Choisissez parmi les options disponibles'
               }
             }
             response.send({
@@ -540,6 +903,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = '30 मिनट के अंतराल में सुबह 10:00 से शाम 7:00 बजे के बीच का समय दर्ज करें (उदा: सुबह 11 बजे, 11:30 बजे)\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie die Zeit zwischen 10:00 und 19:00 Uhr in Intervallen von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr)\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese la hora entre las 10:00 a.m. y las 7:00 p.m.en intervalos de 30 minutos (Ej .: 11 a.m., 11:30 a.m.)\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "Entrez l'heure entre 10h00 et 19h00 par intervalles de 30 minutes (Ex: 11h00, 11h30)\n"
               } 
             }
             else if(params['preference']==='doctor'){
@@ -549,6 +921,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'एक डॉक्टर का नाम दर्ज करें जो एक '+getHindi[params['specialization']]+' है\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie den Namen des Arztes ein, der a '+getGerman[params['specialization']]+'\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese el nombre del médico que es '+getSpanish[params['specialization']]+'\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Entrez le nom du médecin qui est '+getFrench[params['specialization']]+'\n'
+              } 
             }
             else{
               if(language==='en'){
@@ -557,6 +938,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'उपलब्ध विकल्प से चुनें'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Wählen Sie aus den verfügbaren Optionen'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Elige entre las opciones disponibles'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Choisissez parmi les options disponibles'
+              } 
             }
             response.send({
                 fulfillmentText: fulfillmentText
@@ -574,6 +964,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'आप अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nदिनांक दर्ज करें\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können Termine für die nächsten 7 Tage buchen \n Geben Sie das Datum ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Vous pouvez prendre rendez-vous pour les 7 prochains jours\nEntrez la date\n'
+              }
             }
             else if(params['preference']==='doctor'){
               if(language==='en'){
@@ -582,6 +981,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'एक डॉक्टर का नाम दर्ज करें जो एक '+getHindi[params['specialization']]+' है\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie den Namen des Arztes ein, der a '+getGerman[params['specialization']]+'\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese el nombre del médico que es '+getSpanish[params['specialization']]+'\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Entrez le nom du médecin qui est '+getFrench[params['specialization']]+'\n'
+              }
             }
             else{
               if(language==='en'){
@@ -589,6 +997,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'उपलब्ध विकल्प से चुनें'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Wählen Sie aus den verfügbaren Optionen'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Elige entre las opciones disponibles'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Choisissez parmi les options disponibles'
               }
             }
             response.send({
@@ -603,6 +1020,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = '30 मिनट के अंतराल में सुबह 10:00 से शाम 7:00 बजे के बीच का समय दर्ज करें (उदा: सुबह 11 बजे, 11:30 बजे)\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Geben Sie die Zeit zwischen 10:00 und 19:00 Uhr in Intervallen von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr)\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Ingrese la hora entre las 10:00 a.m. y las 7:00 p.m.en intervalos de 30 minutos (Ej .: 11 a.m., 11:30 a.m.)\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "Entrez l'heure entre 10h00 et 19h00 par intervalles de 30 minutes (Ex: 11h00, 11h30)\n"
               } 
             }
             else if(params['preference']==='date'){
@@ -612,6 +1038,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'आप अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nदिनांक दर्ज करें\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können Termine für die nächsten 7 Tage buchen \n Geben Sie das Datum ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Vous pouvez prendre rendez-vous pour les 7 prochains jours\nEntrez la date\n'
+              }
             }
             else{
               if(language==='en'){
@@ -619,6 +1054,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'उपलब्ध विकल्प से चुनें'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Wählen Sie aus den verfügbaren Optionen'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Elige entre las opciones disponibles'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Choisissez parmi les options disponibles'
               }
             }
             response.send({
@@ -639,6 +1083,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते\nमान्य दिनांक दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen \n Geben Sie das gültige Datum ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'No puede reservar una cita por menos de 24 horas.\nIngrese fecha válida\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Vous ne pouvez pas prendre de rendez-vous pour moins de 24 heures\nEntrez une date valide\n'
               }
             }
             else{
@@ -738,6 +1191,146 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         }
                       ]
                 }
+                else if(language==='de'){
+                  fulfillmentText = 'Wählen Sie zwischen Zeit und Arzt\n'
+                    fulfillmentMessages = [
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "simpleResponses": {
+                            "simpleResponses": [
+                              {
+                                "textToSpeech": "Wählen Sie zwischen Zeit und Arzt."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "quickReplies": {
+                            "title": "Wähle ein",
+                            "quickReplies": [
+                              "Zeit",
+                              "Arzt"
+                            ]
+                          },
+                          "platform": "FACEBOOK"
+                        },
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "suggestions": {
+                            "suggestions": [
+                              {
+                                "title": "Zeit"
+                              },
+                              {
+                                "title": "Arzt"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text": {
+                            "text": [
+                              "Wählen Sie zwischen Zeit und Arzt."
+                            ]
+                          }
+                        }
+                      ]
+                }
+                else if(language==='es'){
+                  fulfillmentText = 'Elige entre tiempo y médico\n'
+                    fulfillmentMessages = [
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "simpleResponses": {
+                            "simpleResponses": [
+                              {
+                                "textToSpeech": "Elige entre Hora y Médico."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "quickReplies": {
+                            "title": "Elige uno",
+                            "quickReplies": [
+                              "Hora",
+                              "Médico"
+                            ]
+                          },
+                          "platform": "FACEBOOK"
+                        },
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "suggestions": {
+                            "suggestions": [
+                              {
+                                "title": "Hora"
+                              },
+                              {
+                                "title": "Médico"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text": {
+                            "text": [
+                              "Elige entre tiempo y doctor."
+                            ]
+                          }
+                        }
+                      ]
+                }
+                else if(language==='fr'){
+                  fulfillmentText = 'Choisissez entre le temps et le médecin\n'
+                  fulfillmentMessages = [
+                    {
+                      "platform": "ACTIONS_ON_GOOGLE",
+                      "simpleResponses": {
+                        "simpleResponses": [
+                          {
+                            "textToSpeech": "Choisissez entre le temps et le médecin"	
+    
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "quickReplies": {
+                        
+      "title": "Choisissez-en un", 			
+                        "quickReplies": [
+                          "Temps",
+                          "Docteur"
+                        ]
+                      },
+                      "platform": "FACEBOOK"
+                    },
+                    {
+                      "platform": "ACTIONS_ON_GOOGLE",
+                      "suggestions": {
+                        "suggestions": [
+                          {
+                            
+    "title": "Temps"		
+                          },
+                          {
+                            
+    "title": "Docteur"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "text": {
+                        "text": [
+                          
+        "Choisissez entre le temps et le médecin"	
+                        ]
+                      }
+                    }
+                  ]
+                }
               }
                 else{
                   if(language==='en'){
@@ -745,6 +1338,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                    else if(language==='hi'){
                     fulfillmentText = 'आप केवल अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nमान्य दिनांक दर्ज करें\n'
+                  }
+                  else if(language==='de'){
+                    fulfillmentText = 'Sie können Termine nur für die nächsten 7 Tage buchen \nGeben Sie das gültige Datum ein\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'Vous ne pouvez prendre des rendez-vous que pour les 7 prochains jours\nEntrez une date valide\n'
                   } 
                 }
             
@@ -853,6 +1455,144 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         }
                       ]
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Wählen Sie zwischen Datum und Arzt\n';
+                    fulfillmentMessages = [
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "simpleResponses": {
+                            "simpleResponses": [
+                              {
+                                "textToSpeech": "Wählen Sie zwischen Datum und Arzt."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "quickReplies": {
+                            "title": "Wähle ein",
+                            "quickReplies": [
+                              "Datum",
+                              "Arzt"
+                            ]
+                          },
+                          "platform": "FACEBOOK"
+                        },
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "suggestions": {
+                            "suggestions": [
+                              {
+                                "title": "Datum"
+                              },
+                              {
+                                "title": "Arzt"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text": {
+                            "text": [
+                              "Wählen Sie zwischen Datum und Arzt."
+                            ]
+                          }
+                        }
+                      ]
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'Elige entre fecha y médico\n';
+                    fulfillmentMessages = [
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "simpleResponses": {
+                            "simpleResponses": [
+                              {
+                                "textToSpeech": "Elige entre fecha y médico."
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "quickReplies": {
+                            "title": "Elige uno",
+                            "quickReplies": [
+                              "Fecha",
+                              "Médico"
+                            ]
+                          },
+                          "platform": "FACEBOOK"
+                        },
+                        {
+                          "platform": "ACTIONS_ON_GOOGLE",
+                          "suggestions": {
+                            "suggestions": [
+                              {
+                                "title": "Fecha"
+                              },
+                              {
+                                "title": "Médico"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "text": {
+                            "text": [
+                              "Elige entre fecha y médico."
+                            ]
+                          }
+                        }
+                      ]
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'Choisissez entre la date et le médecin\n'
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              
+      "textToSpeech": "Choisissez entre la date et le médecin"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          
+        "title": "Choisissez-en un",	
+                          "quickReplies": [
+                            "Date",
+                            "Docteur",
+                          ]
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": [
+                            {
+                              "title": "Date"
+                            },
+                            {
+      "title": "Docteur"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                           
+          "Choisissez entre la date et le médecin"	
+                          ]
+                        }
+                      }
+                    ]
+                  }
                       response.send({
                         fulfillmentText: fulfillmentText,
                         fulfillmentMessages : fulfillmentMessages
@@ -866,6 +1606,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = '30 मिनट के अंतराल में समय दर्ज करें (उदाहरण: सुबह 11:00 बजे, 11:30 बजे)\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Geben Sie die Zeit im Abstand von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr).\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Ingrese el tiempo en el intervalo de 30 minutos (Ej .: 11:00 am, 11:30 am)\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Entrez l'heure dans l'intervalle de 30 minutes (Ex: 11h00, 11h30)\n"
+                      }
                     response.send({
                       fulfillmentText : fulfillmentText
                     })
@@ -877,6 +1626,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'चयनित समय सुबह 10:00 बजे और शाम 7:00 बजे तक नहीं है। मान्य समय दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Die ausgewählte Zeit ist nicht innerhalb von 10:00 Uhr und 19:00 Uhr. Geben Sie eine gültige Zeit ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'La hora seleccionada no es dentro de las 10:00 a.m. y las 7:00 p.m. Ingrese hora válida\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "L'heure sélectionnée n'est pas entre 10h00 et 19h00. Entrez une heure valide\n "
               }
                 response.send({
                     fulfillmentText: fulfillmentText
@@ -896,6 +1654,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                       else if(language==='hi'){
                         fulfillmentText = getHindi[params['doctor']]+' '+getHindi[params['specialization']]+' नहीं हैं। उपयुक्त चिकित्सक नाम दर्ज करें\n';
+                      }
+                      else if(language==='de'){
+                        fulfillmentText = params['doctor']+' ist kein '+getGerman[params['specialization']]+'.Geben Sie den entsprechenden Namen des Arztes ein\n';
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = params['doctor']+'no es '+getSpanish[params['specialization']]+'.Ingrese el nombre del médico apropiado\n';
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = params['doctor'] + "n'est pas un" + getFrench[params['specialization']] + ". Entrez le nom de docteur approprié\n"
                       }
                     }
                     else{
@@ -989,6 +1756,145 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             }
                           ]
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Wählen Sie zwischen Datum und Uhrzeit\n'
+                        fulfillmentMessages = [
+                            {
+                              "platform": "ACTIONS_ON_GOOGLE",
+                              "simpleResponses": {
+                                "simpleResponses": [
+                                  {
+                                    "textToSpeech": "Wählen Sie zwischen Uhrzeit und Datum."
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "quickReplies": {
+                                "title": "Wähle ein",
+                                "quickReplies": [
+                                  "Zeit",
+                                  "Datum"
+                                ]
+                              },
+                              "platform": "FACEBOOK"
+                            },
+                            {
+                              "platform": "ACTIONS_ON_GOOGLE",
+                              "suggestions": {
+                                "suggestions": [
+                                  {
+                                    "title": "Zeit"
+                                  },
+                                  {
+                                    "title": "Datum"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "text": {
+                                "text": [
+                                  "Wählen Sie zwischen Uhrzeit und Datum."
+                                ]
+                              }
+                            }
+                          ]
+
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Elige entre fecha y hora\n'
+                        fulfillmentMessages = [
+                            {
+                              "platform": "ACTIONS_ON_GOOGLE",
+                              "simpleResponses": {
+                                "simpleResponses": [
+                                  {
+                                    "textToSpeech": "Elige entre hora y fecha."
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "quickReplies": {
+                                "title": "Elige uno",
+                                "quickReplies": [
+                                  "Hora",
+                                  "Fecha"
+                                ]
+                              },
+                              "platform": "FACEBOOK"
+                            },
+                            {
+                              "platform": "ACTIONS_ON_GOOGLE",
+                              "suggestions": {
+                                "suggestions": [
+                                  {
+                                    "title": "Hora"
+                                  },
+                                  {
+                                    "title": "Fecha"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "text": {
+                                "text": [
+                                  "Elige entre hora y fecha."
+                                ]
+                              }
+                            }
+                          ]
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Choisissez entre la date et l'heure\n"
+                        fulfillmentMessages = [
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "Choisissez entre la date et l'heure"
+        
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "Choisissez-en un",
+      
+                              "quickReplies": [
+                                "Temps",
+                                "Date"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Temps"
+                                },
+                                {
+                                  "title": "Date"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                "Choisissez entre l'heure et la date"
+        
+                              ]
+                            }
+                          }
+                        ]
+                      }
                         
                     }
                     response.send({
@@ -1018,6 +1924,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते। मान्य दिनांक दर्ज करें\nमान्य दिनांक दर्ज करें'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen. Gültiges Datum eingeben \nSie können die Uhrzeit durch Eingabe einer neuen Uhrzeit ändern\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'No puede reservar una cita por menos de 24 horas. Ingrese una fecha válida \n Puede cambiar la hora ingresando una nueva hora \n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "Vous ne pouvez pas prendre rendez-vous pour moins de 24 heures. Entrez une date valide\nVous pouvez modifier l'heure en saisissant une nouvelle heure\n"
               }
                 response.send({
                     fulfillmentText: fulfillmentText
@@ -1052,6 +1967,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = 'इस क्षेत्र में कोई डॉक्टर उपलब्ध नहीं हैं\n'
                           }
+                          else if(language==='de'){
+                            fulfillmentText = 'In diesem Bereich sind keine Ärzte verfügbar\n'
+                          }
+                          else if(language==='es'){
+                            ulfillmentText = 'No hay médicos disponibles en este campo \n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Aucun médecin disponible dans ce domaine\n'
+                          }
                         }
                         else{
                         snapshot.forEach((doc) => { doctors.push(doc.data()) });
@@ -1076,6 +2000,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             timelist.push({
                                 "title": getHindi[doctor]
                               })
+                          }
+                          else if(language==='de'){
+                            availdoctorshin.push(doctor)
+                            fulfillmentText += doctor +'\n';
+                            timelist.push({
+                                "title": doctor
+                              })
+                          }
+                          else if(language==='es'){
+                            availdoctorshin.push(doctor)
+                            fulfillmentText += doctor +'\n';
+                            timelist.push({
+                                "title": doctor
+                              })
+                          }
+                          else if(language==='fr'){
+                            availdoctorshin.push(doctor)
+                            fulfillmentText += doctor +'\n';
+                            timelist.push({
+                                "title": doctor
+                              })
                           } 
                         })
                         if(fulfillmentText === ''){
@@ -1085,6 +2030,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = 'कोई भी डॉक्टर '+ params['date']+' को '+getHindi[params['time']]+' उपलब्ध नहीं है\nअलग तारीख डालें\n';
                           }
+                          else if(language==='de'){
+                            fulfillmentText = 'Kein Arzt verfügbar am '+ params['date']+' beim '+getGerman[params['time']]+'\nGeben Sie ein anderes Datum ein\n';
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = 'Ningún médico disponible el'+ params['date']+' a las '+getSpanish[params['time']]+'\nIngrese una fecha diferente\n';
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Aucun médecin disponible le '+ params['date'] +' at '+ getFrench[params['time']] +'\nSaisissez une date différente\n '
+                          }
                             success = false
                         }
                         else{
@@ -1093,6 +2047,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText += 'ऊपर से अपनी पसंद का डॉक्टर नाम दर्ज करें\n';
+                          }
+                          else if(language==='de'){
+                            fulfillmentText += 'Geben Sie oben den Namen Ihres Arztes ein\n';
+                          }
+                          else if(language==='es'){
+                            fulfillmentText += 'Ingrese el nombre del médico de su elección desde arriba\n';
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText += 'Entrez le nom du médecin de votre choix ci-dessus\n';
                           }
                             success = true
                         }
@@ -1166,6 +2129,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               }
                             ]
                           }
+                          else if(language==='de'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Wählen Sie Ihren Arzt"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Wählen Sie Ihren Arzt",
+                                  "quickReplies": availdoctorshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                          else if(language==='es'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Elige tu doctor"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Elige tu doctor",
+                                  "quickReplies": availdoctorshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                          else if(language==='fr'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Choose your doctor",
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Choose your doctor",
+                                  "quickReplies": availdoctorshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
                         }
                         
                         console.log("fulfillmentText: ",fulfillmentText)
@@ -1192,6 +2257,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'आप केवल अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nमान्य दिनांक दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Sie können Termine nur für die nächsten 7 Tage buchen \nGeben Sie das gültige Datum ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = 'Vous ne pouvez prendre des rendez-vous que pour les 7 prochains jours\nEntrez une date valide\n'	
               }
                 response.send({
                     fulfillmentText : fulfillmentText
@@ -1241,6 +2315,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             else if(language==='hi'){
                               fulfillmentText += 'ऊपर उपलब्ध समय से समय चुनें:\n'
                             }
+                            else if(language==='de'){
+                              fulfillmentText += 'Wählen Sie die Zeit aus der oben angegebenen verfügbaren Zeit:\n'
+                            }
+                            else if(language==='es'){
+                              fulfillmentText += 'Elija el tiempo del tiempo disponible arriba:\n'
+                            }
+                            else if(language==='fr'){
+                              fulfillmentText += 'Choisissez le temps parmi le temps disponible ci-dessus:\n'	
+                            }
                             success = true
                             
                         }  
@@ -1267,6 +2350,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                 "title": getHindi[time]
                               })
                           }
+                          else if(language==='de'){
+                            time_slotshin.push(getGerman[time])
+                            fulfillmentText += getGerman[time] + '\n';
+                            timelist.push({
+                                "title": getGerman[time]
+                              })
+                          }
+                          else if(language==='es'){
+                            time_slotshin.push(getSpanish[time])
+                            fulfillmentText += getSpanish[time] + '\n';
+                            timelist.push({
+                                "title": getSpanish[time]
+                              })
+                          }
+                          else if(language==='fr'){
+                            time_slotshin.push(getFrench[time])
+                            fulfillmentText += getFrench[time] + '\n';
+                            timelist.push({
+                                "title": getFrench[time]
+                              })
+                          }
                             
                         })
                         
@@ -1277,6 +2381,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='en'){
                             fulfillmentText = params['doctor']+' has no time slot available on '+params['date']+'Choose different date:\n';
                           }
+                          else if(language==='de'){
+                            fulfillmentText = params['doctor']+' Es ist kein Zeitfenster verfügbar '+params['date']+'Wählen Sie ein anderes Datum:\n';
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = params['doctor']+'no tiene intervalo de tiempo disponible en'+params['date']+'Elige una fecha diferente:\n';
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = params['doctor'] + " n'a pas de plage horaire disponible sur " + params['date'] + 'Choisissez une date différente:\n'
+                          }
                             success = false
                         }
                         else{
@@ -1285,6 +2398,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText += 'ऊपर उपलब्ध समय से समय चुनें:\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText += 'Wählen Sie die Zeit aus der oben angegebenen verfügbaren Zeit:\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText += 'Elija el tiempo del tiempo disponible arriba:\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText += 'Choisissez le temps parmi le temps disponible ci-dessus:\n'
                           }
                             console.log('choose')
                             success = true
@@ -1305,6 +2427,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = 'आप केवल अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nमान्य दिनांक दर्ज करें\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Sie können Termine nur für die nächsten 7 Tage buchen \nGeben Sie das gültige Datum ein\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Puede reservar citas para los próximos 7 días.\nIngrese la fecha\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = 'Vous ne pouvez prendre de rendez-vous que pour les 7 prochains jours\nEntrez une date valide\n'
+                      }
                         success = false
                     }
                     date = currentdatetime();
@@ -1315,6 +2446,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                       else if(language==='hi'){
                         fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते\nमान्य दिनांक दर्ज करें\n'
+                      }
+                      else if(language==='de'){
+                        fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen \n Geben Sie das gültige Datum ein\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'No puede reservar una cita por menos de 24 horas.\nIngrese fecha válida\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = 'Vous ne pouvez pas prendre de rendez-vous pour moins de 24 heures\nSaisissez une date valide\n'
                       }  
                       success = false
                 }
@@ -1387,6 +2527,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                     ]
                   }
+                  else if(language==='de'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Wähle deine Zeit"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Wähle ein",
+                          "quickReplies": time_slots
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                  else if(language==='es'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Elige tu tiempo"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Elige uno",
+                          "quickReplies": time_slots
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                  else if(language==='fr'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Choisissez votre heure"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Choisissez-en un",
+                          "quickReplies": time_slots
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]	
+                  }
                 }
                     response.send({
                             fulfillmentText: fulfillmentText,
@@ -1442,6 +2684,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = getHindi[params['doctor']]+' '+getHindi[params['specialization']]+' नहीं हैं।. उपयुक्त चिकित्सक नाम दर्ज करें\n';
                           }
+                          else if(language==='de'){
+                            fulfillmentText = params['doctor']+' ist kein '+getGerman[params['specialization']]+'. Geben Sie einen gültigen Ärztenamen ein\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = params['doctor']+'no es '+getSpanish[params['specialization']]+'. Ingrese un nombre de médico válido\n';
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = params['doctor'] + " n'est pas un " + getFrench[params['specialization']] + '. Entrez le nom de docteur approprié\n'
+                          }
                             
                         }
                         else{
@@ -1450,6 +2701,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText = getHindi[params['time']]+' '+getHindi[params['doctor']]+'निम्नलिखित तारीखों में उपलब्ध हैं\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText = params['doctor']+' beim '+getGerman[params['time']]+' ist verfügbar am:\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = params['doctor']+'a las'+getSpanish[params['time']]+' está disponible en:\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = params['doctor'] + ' at ' + getFrench[params['time']] + 'est disponible sur:\n'
                           } 
                             availdates.forEach((date)=>{
                                 fulfillmentText += date+"\n"
@@ -1528,6 +2788,110 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               }
                             ]
                           }
+                          else if(language==='de'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Wählen Sie Ihr Datum"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Wählen Sie Ihr Datum",
+                                  "quickReplies": availdates
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+
+                          }
+                          else if(language==='es'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Elige tu fecha"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Elige tu fecha",
+                                  "quickReplies": availdates
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                          else if(language==='fr'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Choisissez votre date"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Choisissez votre date",
+                                  "quickReplies": availdates
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+
+                          }
                             }
                         response.send({
                             fulfillmentText: fulfillmentText,
@@ -1582,6 +2946,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = getHindi[params['doctor']]+' '+getHindi[params['specialization']]+' नहीं हैं।. उपयुक्त चिकित्सक नाम दर्ज करें\n';
                           }
+                          else if(language==='de'){
+                            fulfillmentText = params['doctor']+' ist kein '+getGerman[params['specialization']]+'. Geben Sie einen gültigen Ärztenamen ein\n';
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = params['doctor']+'no es '+getSpanish[params['specialization']]+'. Ingrese un nombre de médico válido\n';
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = params['doctor'] + " n'est pas un " + getFrench[params['specialization']] + '. Entrez un nom de médecin valide\n';
+                          }
                         }
                         else{
                           if(language==='en'){
@@ -1589,6 +2962,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText = params['date']+' को '+getHindi[params['doctor']]+' निम्नलिखित समय पर उपलब्ध हैं\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText = params['doctor']+' auf '+params['date']+' ist verfügbar unter:\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = params['doctor']+'en'+params['date']+' está disponible en:\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = params['doctor'] + ' on ' + params['date'] + 'est disponible sur:\n' 
                           }
                               
                             time_slots.forEach((time)=>{
@@ -1605,6 +2987,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   "title": getHindi[time]
                                 })
                               }
+                              else if(language==='de'){
+                                time_slotshin.push(getGerman[time])
+                                fulfillmentText += getGerman[time]+"\n"
+                                timelist.push({
+                                  "title": getGerman[time]
+                                })
+                              }
+                              else if(language==='es'){
+                                time_slotshin.push(getSpanish[time])
+                                fulfillmentText += getSpanish[time]+"\n"
+                                timelist.push({
+                                  "title": getSpanish[time]
+                                })
+                              }
+                              else if(language==='fr'){
+                                time_slotshin.push(getFrench[time])
+                                fulfillmentText += getFrench[time]+"\n"
+                                timelist.push({
+                                  "title": getFrench[time]
+                                })
+                              }
                                 
                             })
                             if(language==='en'){
@@ -1612,6 +3015,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             }
                             else if(language==='hi'){
                               fulfillmentText += 'ऊपर उपलब्ध समय से समय चुनें'
+                            }
+                            else if(language==='de'){
+                              fulfillmentText += 'Wählen Sie die Zeit aus der oben angegebenen verfügbaren Zeit:\n'
+                            }
+                            else if(language==='es'){
+                              fulfillmentText += 'Elija el tiempo del tiempo disponible arriba:\n'
+                            }
+                            else if(language==='fr'){
+                              fulfillmentText += 'Choisissez le temps parmi le temps disponible ci-dessus\n'
                             }
                             success = true
                         }
@@ -1684,6 +3096,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               }
                             ]
                           }
+                          else if(language==='de'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Wähle deine Zeit"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Wähle deine Zeit",
+                                  "quickReplies": time_slotshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                          else if(language==='es'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Elige tu tiempo"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Elige tu tiempo",
+                                  "quickReplies": time_slotshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                          else if(language==='fr'){
+                            fulfillmentMessages = [
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "simpleResponses": {
+                                  "simpleResponses": [
+                                    {
+                                      "textToSpeech": "Choisissez votre heure"
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "quickReplies": {
+                                  "title": "Choisissez votre heure",
+                                  "quickReplies": time_slotshin
+                                },
+                                "platform": "FACEBOOK"
+                              },
+                              {
+                                "platform": "ACTIONS_ON_GOOGLE",
+                                "suggestions": {
+                                  "suggestions": timelist
+                                }
+                              },
+                              {
+                                "text": {
+                                  "text": [
+                                    fulfillmentText
+                                  ]
+                                }
+                              }
+                            ]
+                          }
                             
                             }
                         response.send({
@@ -1713,6 +3227,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = getHindi[params['doctor']]+' के पास '+params['date']+' को कोई समय उपलब्ध नहीं है\nअन्य '+getHindi[params['specialization']]+' दर्ज करें (आप नई तारीख दर्ज करके तारीख बदल सकते हैं)\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = params['doctor']+' hat keine Zeit zur Verfügung '+params['date']+'\nGeben Sie andere ein '+getGerman[params['specialization']]+'(Sie können das Datum ändern, indem Sie ein neues Datum eingeben.)\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = params['doctor']+' no tiene tiempo disponible el '+params['date']+'\nIngrese otra '+getSpanish[parmas['specialization']]+'(puede cambiar la fecha ingresando una nueva fecha)\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = params['doctor'] + " n'a pas de temps disponible sur " + params['date'] + '\nEntrez les autres' + getFrench[paramas['specialization']] + '(vous pouvez changer la date en entrant une nouvelle date)\n'
+                  }
                 }
                 else{
                   if(language==='en'){
@@ -1720,6 +3243,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                   else if(language==='hi'){
                     fulfillmentText =  getHindi[params['doctor']]+params['date']+' को निम्नलिखित समय पर उपलब्ध हैं\n'
+                  }
+                  else if(language==='de'){
+                    fulfillmentText = params['doctor']+' auf '+params['date']+' ist verfügbar unter:\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = params['doctor']+'en'+params['date']+' está disponible en:\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = params['doctor'] + ' on ' + params['date'] + 'est disponible sur:\n'
                   }
                       
                     time_slots.forEach((time)=>{
@@ -1736,6 +3268,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                             "title": getHindi[time]
                           })
                       }
+                      else if(language==='de'){
+                        time_slotshin.push(getGerman[time])
+                        fulfillmentText += getGerman[time]+"\n"
+                        timelist.push({
+                            "title": getGerman[time]
+                          })
+                      }
+                      else if(language==='es'){
+                        time_slotshin.push(getSpanish[time])
+                        fulfillmentText += getSpanish[time]+"\n"
+                        timelist.push({
+                            "title": getSpanish[time]
+                          })
+                      }
+                      else if(language==='fr'){
+                        time_slotshin.push(getFrench[time])
+                        fulfillmentText += getFrench[time]+"\n"
+                        timelist.push({
+                            "title": getFrench[time]
+                          })
+                      }
                         
                     })
                     if(language==='en'){
@@ -1743,6 +3296,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                     }
                     else if(language==='hi'){
                       fulfillmentText += 'ऊपर उपलब्ध समय से समय चुनें:\n'
+                    }
+                    else if(language==='de'){
+                      fulfillmentText += 'Wählen Sie die Zeit aus der oben angegebenen verfügbaren Zeit:\n'
+                    }
+                    else if(language==='es'){
+                      fulfillmentText += 'Elija el tiempo del tiempo disponible arriba:\n'
+                    }
+                    else if(language==='fr'){
+                      fulfillmentText += "Choisissez l'heure parmi celles disponibles ci-dessus:\n"
                     }
                     
                     success = true
@@ -1755,6 +3317,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                   else if(language==='hi'){
                     fulfillmentText = getHindi[params['doctor']]+' '+getHindi[params['specialization']]+' नहीं हैं उपयुक्त चिकित्सक नाम दर्ज करें\n'
+                  }
+                  else if(language==='de'){
+                    fulfillmentText = params['doctor']+' ist kein '+getGerman[params['specialization']]+'.Geben Sie den entsprechenden Namen des Arztes ein\n';
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = params['doctor']+'no es '+getSpanish[params['specialization']]+'.Ingrese el nombre del médico apropiado\n';
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = params['doctor'] + " n'est pas un " + getFrench[params['specialization']] + '. Entrez le nom de docteur approprié\n';
                   }
                     
                     success = false
@@ -1828,6 +3399,111 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                     ]
                   }
+                  else if(language==='de'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Wähle deine Zeit"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Wähle deine Zeit",
+                          "quickReplies": time_slotshin
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+
+                  }
+                  else if(language==='es'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Elige tu tiempo"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Elige tu tiempo",
+                          "quickReplies": time_slotshin
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+
+                  }
+                  else if(language==='fr'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Choisissez votre heure"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Choisissez votre heure",
+                          "quickReplies": time_slotshin
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]	
+
+                  }
                     
                     }
                 response.send({
@@ -1880,6 +3556,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                       else if(language==='hi'){
                                         fulfillmentText = 'इस क्षेत्र में कोई डॉक्टर उपलब्ध नहीं हैं\n'
                                       }
+                                      else if(language==='de'){
+                                        fulfillmentText = 'In diesem Bereich sind keine Ärzte verfügbar\n'
+                                      }
+                                      else if(language==='es'){
+                                        fulfillmentText = 'No hay médicos disponibles en este campo \n'
+                                      }
+                                      else if(language==='fr'){
+                                        fulfillmentText = 'Aucun médecin disponible dans ce domaine\n'
+                                      }
                                        
                                         
                                     }
@@ -1907,6 +3592,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                             "title": getHindi[doctor]
                                           })
                                       }
+                                      else if(language==='de'){
+                                        availdoctorshin.push(doctor)
+                                        fulfillmentText += doctor +'\n'
+                                        timelist.push({
+                                            "title": doctor
+                                          })
+                                      }
+                                      else if(language==='es'){
+                                        availdoctorshin.push(doctor)
+                                        fulfillmentText += doctor +'\n'
+                                        timelist.push({
+                                            "title": doctor
+                                          })
+                                      }
+                                      else if(language==='fr'){
+                                        availdoctorshin.push(doctor)
+                                        fulfillmentText += doctor +'\n'
+                                        timelist.push({
+                                            "title": doctor
+                                          })
+                                      }
                                     })
                                     if(fulfillmentText === ''){
                                       if(language==='en'){
@@ -1914,6 +3620,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                       }
                                       else if(language==='hi'){
                                         fulfillmentText = getHindi[params['time']]+' '+params['date']+' पर कोई डॉक्टर उपलब्ध नहीं है\nअलग समय दर्ज करें'
+                                      }
+                                      else if(language==='de'){
+                                        fulfillmentText = 'Kein Arzt verfügbar am '+ params['date']+' beim '+getGerman[params['time']]+'\nGeben Sie eine andere Zeit ein\n';
+                                      }
+                                      else if(language==='es'){
+                                        fulfillmentText = 'Ningún médico disponible el '+ params['date']+'a las'+getSpanish[params['time']]+'\nIngrese un tiempo diferente\n';
+                                      }
+                                      else if(language==='fr'){
+                                        fulfillmentText = 'Aucun médecin disponible le '+ params['date'] +' at '+ getFrench[params['time']] +' \nSaisissez une heure différente\n';
                                       }
                                         
                                     }
@@ -1923,6 +3638,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                       }
                                       else if(language==='hi'){
                                         fulfillmentText += 'ऊपर से अपनी पसंद का डॉक्टर नाम दर्ज करें\n';
+                                      }
+                                      else if(language==='de'){
+                                        fulfillmentText += 'Geben Sie oben den Namen Ihres Arztes ein\n';
+                                      }
+                                      else if(language==='es'){
+                                        fulfillmentText += 'Ingrese el nombre del médico de su elección desde arriba\n';
+                                      }
+                                      else if(language==='fr'){
+                                        fulfillmentText += 'Entrez le nom du médecin de votre choix ci-dessus\n';
                                       }
                                         
                                         success = true
@@ -1999,6 +3723,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                           }
                                         ]
                                       }
+                                      else if(language==='de'){
+                                        fulfillmentMessages = [
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "simpleResponses": {
+                                              "simpleResponses": [
+                                                {
+                                                  "textToSpeech": "Wählen Sie Ihren Arzt"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "quickReplies": {
+                                              "title": "Wählen Sie Ihren Arzt",
+                                              "quickReplies": availdoctorshin
+                                            },
+                                            "platform": "FACEBOOK"
+                                          },
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "suggestions": {
+                                              "suggestions": timelist
+                                            }
+                                          },
+                                          {
+                                            "text": {
+                                              "text": [
+                                                fulfillmentText
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                      else if(language==='es'){
+                                        fulfillmentMessages = [
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "simpleResponses": {
+                                              "simpleResponses": [
+                                                {
+                                                  "textToSpeech": "Elige tu doctor"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "quickReplies": {
+                                              "title": "Elige tu doctor",
+                                              "quickReplies": availdoctorshin
+                                            },
+                                            "platform": "FACEBOOK"
+                                          },
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "suggestions": {
+                                              "suggestions": timelist
+                                            }
+                                          },
+                                          {
+                                            "text": {
+                                              "text": [
+                                                fulfillmentText
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                      else if(language==='fr'){
+                                        fulfillmentMessages = [
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "simpleResponses": {
+                                              "simpleResponses": [
+                                                {
+                                                  "textToSpeech": "Choisissez votre médecin"
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          {
+                                            "quickReplies": {
+                                              "title": "Choisissez votre médecin",
+                                              "quickReplies": availdoctorshin
+                                            },
+                                            "platform": "FACEBOOK"
+                                          },
+                                          {
+                                            "platform": "ACTIONS_ON_GOOGLE",
+                                            "suggestions": {
+                                              "suggestions": timelist
+                                            }
+                                          },
+                                          {
+                                            "text": {
+                                              "text": [
+                                                fulfillmentText
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
                                         
                                         }
                                     response.send({
@@ -2023,6 +3849,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = '30 मिनट के अंतराल में समय दर्ज करें (पूर्व: सुबह 11:00 बजे, 11:30 बजे)\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Geben Sie die Zeit im Abstand von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr).\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Ingrese el tiempo en el intervalo de 30 minutos (Ej .: 11:00 am, 11:30 am)\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Entrez l'heure dans un intervalle de 30 minutes (Ex: 11h00, 11h30)\n"
+                      }
                         response.send({
                             fulfillmentText: fulfillmentText
                         })
@@ -2035,6 +3870,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते।\nउचित समय दर्ज करें (नई तारीख डालकर आप अपनी तारीख भी बदल सकते हैं)\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen. \n Geben Sie die entsprechende Uhrzeit ein (Sie können Ihr Datum auch ändern, indem Sie ein neues Datum eingeben.)\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'No puede reservar una cita por menos de 24 horas. \n Ingrese el tiempo apropiado (También puede cambiar su fecha ingresando una nueva fecha) \n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = "Vous ne pouvez pas prendre de rendez-vous pour moins de 24 heures.\nEntrez l'heure appropriée (vous pouvez également modifier votre date en entrant une nouvelle date)\n"
+                  }
                     response.send({
                         fulfillmentText: fulfillmentText
                     })
@@ -2046,6 +3890,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'चयनित समय सुबह 10:00 बजे और शाम 7:00 बजे तक नहीं है। मान्य समय दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Die ausgewählte Zeit ist nicht innerhalb von 10:00 Uhr und 19:00 Uhr. Geben Sie eine gültige Zeit ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'La hora seleccionada no es dentro de las 10:00 a.m. y las 7:00 p.m. Ingrese hora válida\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "L'heure sélectionnée n'est pas entre 10h00 et 19h00. Entrez une heure valide\n"
               }
                 response.send({
                     fulfillmentText: fulfillmentText
@@ -2097,6 +3950,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                 }
                                 else if(language==='hi'){
                                   fulfillmentText = getHindi[params['time']]+' '+getHindi[params['doctor']]+' निम्नलिखित तिथियों पर उपलब्ध हैं\n'
+                                }
+                                else if(language==='de'){
+                                  fulfillmentText = params['doctor']+' beim '+getGerman[params['time']]+' ist verfügbar am:\n'  
+                                }
+                                else if(language==='es'){
+                                  fulfillmentText = params['doctor']+'a las'+getSpanish[params['time']]+' está disponible en:\n'  
+                                }
+                                else if(language==='fr'){
+                                  fulfillmentText = params['doctor'] + ' at ' + getFrench[params['time']] + 'est disponible sur:\n' 
                                 }
                                 
                                 availdates.forEach((date)=>{
@@ -2175,6 +4037,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                       }
                                     ]
                                   }
+                                  else if(language==='de'){
+                                    fulfillmentMessages = [
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "simpleResponses": {
+                                          "simpleResponses": [
+                                            {
+                                              "textToSpeech": "Wählen Sie Ihr Datum"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "quickReplies": {
+                                          "title": "Wählen Sie Ihr Datum",
+                                          "quickReplies": availdates
+                                        },
+                                        "platform": "FACEBOOK"
+                                      },
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "suggestions": {
+                                          "suggestions": timelist
+                                        }
+                                      },
+                                      {
+                                        "text": {
+                                          "text": [
+                                            fulfillmentText
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                  else if(language==='es'){
+                                    fulfillmentMessages = [
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "simpleResponses": {
+                                          "simpleResponses": [
+                                            {
+                                              "textToSpeech": "Elige tu fecha"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "quickReplies": {
+                                          "title": "Elige tu fecha",
+                                          "quickReplies": availdates
+                                        },
+                                        "platform": "FACEBOOK"
+                                      },
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "suggestions": {
+                                          "suggestions": timelist
+                                        }
+                                      },
+                                      {
+                                        "text": {
+                                          "text": [
+                                            fulfillmentText
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                  else if(language==='fr'){
+                                    fulfillmentMessages = [
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "simpleResponses": {
+                                          "simpleResponses": [
+                                            {
+                                              "textToSpeech": "Choisissez votre date"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      {
+                                        "quickReplies": {
+                                          "title": "Choose your date",
+                                          "quickReplies": availdates
+                                        },
+                                        "platform": "FACEBOOK"
+                                      },
+                                      {
+                                        "platform": "ACTIONS_ON_GOOGLE",
+                                        "suggestions": {
+                                          "suggestions": timelist
+                                        }
+                                      },
+                                      {
+                                        "text": {
+                                          "text": [
+                                            fulfillmentText
+                                          ]
+                                        }
+                                      }
+                                    ]	
+                                  }
                                     
                                     }
                                 response.send({
@@ -2194,6 +4158,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = '30 मिनट के अंतराल में समय दर्ज करें (पूर्व: सुबह 11:00 बजे, 11:30 बजे)\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Geben Sie die Zeit im Abstand von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr).\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Ingrese el tiempo en el intervalo de 30 minutos (Ej .: 11:00 am, 11:30 am)\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Entrez l'heure dans un intervalle de 30 minutes (Ex: 11h00, 11h30)\n"
+                      }
                         response.send({
                             fulfillmentText: fulfillmentText
                         })
@@ -2206,6 +4179,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते।\nउचित समय दर्ज करें (नई तारीख डालकर आप अपनी तारीख भी बदल सकते हैं)\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen. \n Geben Sie die entsprechende Uhrzeit ein (Sie können Ihr Datum auch ändern, indem Sie ein neues Datum eingeben.)\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'No puede reservar una cita por menos de 24 horas. \n Ingrese el tiempo apropiado (También puede cambiar su fecha ingresando una nueva fecha) \n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = "Vous ne pouvez pas prendre de rendez-vous pour moins de 24 heures.\n Entrez l'heure appropriée (vous pouvez également modifier votre date en entrant une nouvelle date)\n"
+                  }
                     response.send({
                         fulfillmentText: fulfillmentText
                     })
@@ -2217,6 +4199,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'चयनित समय सुबह 10:00 बजे और शाम 7:00 बजे तक नहीं है। मान्य समय दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Die ausgewählte Zeit ist nicht innerhalb von 10:00 Uhr und 19:00 Uhr. Geben Sie eine gültige Zeit ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'La hora seleccionada no es dentro de las 10:00 a.m. y las 7:00 p.m. Ingrese hora válida\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "L'heure sélectionnée n'est pas entre 10h00 et 19h00. Entrez une heure valide\n"
               }
                 response.send({
                     fulfillmentText: fulfillmentText
@@ -2252,6 +4243,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = 'इस क्षेत्र में कोई डॉक्टर उपलब्ध नहीं हैं\n'
                           }
+                          else if(language==='de'){
+                            fulfillmentText = 'In diesem Bereich sind keine Ärzte verfügbar\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = 'No hay médicos disponibles en este campo \n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Aucun médecin disponible dans ce domaine\n'
+                          }
                             
                         
                         }
@@ -2271,6 +4271,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText = 'आप '+getHindi[params['doctor']]+' के साथ '+params['date']+' को '+getHindi[params['time']]+' अपॉइंटमेंट बुक करना चाहते हैं\nहाँ या नहीं दर्ज करें\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText = 'Sie möchten einen Termin mit '+ params['doctor'] +' am '+ params['date'] +' beim '+ getGerman[params['time']] +' \nGeben Sie ein, um zu bestätigen, dass Sie sonst nein eingeben\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = 'Desea reservar una cita con el '+ params['doctor'] +' el '+ params['date'] +' a la '+ getSpanish[params['time']] +' Ingrese sí para confirmar, ingrese no'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\nEntrez oui pour confirmer sinon entrez non\n'
                           }
                             
                             success = true
@@ -2353,6 +4362,123 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   }
                                 ]
                               }
+                              else if(language==='de'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n',
+                                      "quickReplies": ['Ja', 'Nein']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Ja'
+                                      },
+                                      {
+                                          'title':'Nein'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='es'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Desea reservar una cita con el '+ params['doctor'] +' el '+ params['date'] +' a la '+ getSpanish[params['time']] + '\n',
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Desea reservar una cita con el '+ params['doctor'] +' el '+ params['date'] +' a la '+ getSpanish[params['time']] + '\n',
+                                      "quickReplies": ['Si', 'No']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Si'
+                                      },
+                                      {
+                                          'title':'No'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='fr'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n',
+                                      "quickReplies": ['Oui', 'Non']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Oui'
+                                      },
+                                      {
+                                          'title':'Non'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]	
+                              }
                                 
                                 }
                         }
@@ -2364,6 +4490,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               else if(language==='hi'){
                                 fulfillmentText = getHindi[params['doctor']]+' '+params['date']+' को '+getHindi[params['time']]+' उपलब्ध नहीं हैं\n'
                               }
+                              else if(language==='de'){
+                                fulfillmentText = params['doctor']+' ist nicht verfügbar am '+params['date']+' beim '+getGerman[params['time']]+'\n'
+                              }
+                              else if(language==='es'){
+                                fulfillmentText = params['doctor']+' no está disponible en '+params['date']+'a las'+getSpanish[params['time']]+'\n'
+                              }
+                              else if(language==='fr'){
+                                fulfillmentText = params['doctor'] + " n'est pas disponible sur" + params['date'] + ' at ' + getFrench[params['time']] +'\n'
+                              }
                                 
                             }
                             else{
@@ -2373,6 +4508,16 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               else if(language==='hi'){
                                 fulfillmentText = getHindi[params['doctor']]+' '+getHindi[params['specialization']]+' नहीं हैं\n'
                               }
+                              else if(language==='de'){
+                                fulfillmentText = params['doctor']+' ist kein '+getGerman[params['specialization']]+'\n'
+                                
+                              }
+                              else if(language==='es'){
+                                fulfillmentText = params['doctor']+'no es '+getSpanish[params['specialization']]+'\n'
+                              }
+                              else if(language==='fr'){
+                                fulfillmentText = params['doctor'] + " n'est pas un " + getFrench[params['specialization']] + '\n'
+                              }
                                 
                             }
                             if(availdoctors.length<1){
@@ -2381,6 +4526,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                               }
                               else if(language==='hi'){
                                 fulfillmentText = params['date']+' को '+getHindi[params['time']]+' कोई डॉक्टर उपलब्ध नहीं है\nअलग समय दर्ज करें\n'
+                              }
+                              else if(language==='de'){
+                                fulfillmentText = 'Kein Arzt verfügbar am '+ params['date']+' beim '+getGerman[params['time']]+'\nGeben Sie eine andere Zeit ein\n';
+                              }
+                              else if(language==='es'){
+                                fulfillmentText = 'Ningún médico disponible el '+ params['date']+'a las'+getSpanish[params['time']]+'\nIngrese un tiempo diferente\n';
+                              }
+                              else if(language==='fr'){
+                                fulfillmentText = 'Aucun médecin disponible le '+ params['date'] +' at '+ getFrench[params['time']] +'\nSaisissez une heure différente\n';
                               }
                                 
                             }
@@ -2399,6 +4553,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                         "title": getHindi[doctor]
                                       })
                                   }
+                                  else if(language==='de'){
+                                    availdoctorshin.push(doctor)
+                                    fulfillmentText += doctor +'\n';
+                                    timelist.push({
+                                        "title": doctor
+                                      })
+                                  }
+                                  else if(language==='es'){
+                                    availdoctorshin.push(doctor)
+                                    fulfillmentText += doctor +'\n';
+                                    timelist.push({
+                                        "title": doctor
+                                      })
+                                  }
+                                  else if(language==='fr'){
+                                    availdoctorshin.push(doctor)
+                                    fulfillmentText += doctor +'\n';
+                                    timelist.push({
+                                        "title": doctor
+                                      })
+                                  }
                                     
                                 })
                                 if(language==='en'){
@@ -2406,6 +4581,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                 }
                                 else if(language==='hi'){
                                   fulfillmentText += 'दी गई सूची में से चुनें:\n'
+                                }
+                                else if(language==='de'){
+                                  fulfillmentText += 'Wählen Sie aus der angegebenen Liste:\n'
+                                }
+                                else if(language==='es'){
+                                  fulfillmentText += 'Elija de la lista dada:\n'
+                                }
+                                else if(language==='fr'){
+                                  fulfillmentText += 'Choisissez dans la liste donnée:\n'
                                 }
                                  
                                 success = true
@@ -2460,6 +4644,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   {
                                     "quickReplies": {
                                       "title": "अपने डॉक्टर को चुनें",
+                                      "quickReplies": availdoctorshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='de'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Wählen Sie Ihren Arzt"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Wählen Sie Ihren Arzt",
+                                      "quickReplies": availdoctorshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='es'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Elige tu doctor"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Elige tu doctor",
+                                      "quickReplies": availdoctorshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='fr'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Choisissez votre médecin"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Choisissez votre médecin",
                                       "quickReplies": availdoctorshin
                                     },
                                     "platform": "FACEBOOK"
@@ -2554,6 +4840,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           else if(language==='hi'){
                             fulfillmentText = 'आप '+getHindi[params['doctor']]+' के साथ '+params['date']+' को '+getHindi[params['time']]+' अपॉइंटमेंट बुक करना चाहते हैं\nहाँ या नहीं दर्ज करें\n'
                           }
+                          else if(language==='de'){
+                            fulfillmentText = 'Sie möchten einen Termin mit '+ params['doctor'] +' am '+ params['date'] +' beim '+ getGerman[params['time']] +' \nGeben Sie ein, um zu bestätigen, dass Sie sonst nein eingeben\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\nIngrese sí para confirmar, ingrese no\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\nEntrez oui pour confirmer sinon entrez non\n'
+                          }
                             
                             success = true
                             if(success){
@@ -2635,6 +4930,123 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   }
                                 ]
                               }
+                              else if(language==='de'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n',
+                                      "quickReplies": ['Ja', 'Nein']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Ja'
+                                      },
+                                      {
+                                          'title':'Nein'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='es'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\n',
+                                      "quickReplies": ['Si', 'No']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Si'
+                                      },
+                                      {
+                                          'title':'No'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='fr'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n',
+                                      "quickReplies": ['Oui', 'Non']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Oui'
+                                      },
+                                      {
+                                          'title':'Non'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
                                 
                                 }
                         }
@@ -2644,6 +5056,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language==='hi'){
                             fulfillmentText = getHindi[params['time']]+' से बुकिंग है। उपलब्ध समय से चुनें\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText = getGerman[params['time']]+' ist bereits gebucht. Wählen Sie aus der verfügbaren Zeit\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = getSpanish[params['time']]+' ya está reservado. Elige entre tiempo disponible\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = getFrench[params['time']] +' est déjà réservé. Choisissez parmi le temps disponible\n'
                           }
                             
                             time_slots.forEach((time, index) => {
@@ -2658,6 +5079,27 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                 fulfillmentText += getHindi[time] + '\n';
                                 timelist.push({
                                     "title": getHindi[time]
+                                  })
+                              }
+                              else if(language==='de'){
+                                time_slotshin.push(getGerman[time])
+                                fulfillmentText += getGerman[time] + '\n';
+                                timelist.push({
+                                    "title": getGerman[time]
+                                  })
+                              }
+                              else if(language==='es'){
+                                time_slotshin.push(getSpanish[time])
+                                fulfillmentText += getSpanish[time] + '\n';
+                                timelist.push({
+                                    "title": getSpanish[time]
+                                  })
+                              }
+                              else if(language==='fr'){
+                                time_slotshin.push(getFrench[time])
+                                fulfillmentText += getFrench[time] + '\n';
+                                timelist.push({
+                                    "title": getFrench[time]
                                   })
                               }
                               })
@@ -2731,6 +5173,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   }
                                 ]
                               }
+                              else if(language==='de'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Wähle deine Zeit"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Wähle deine Zeit",
+                                      "quickReplies": time_slotshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='es'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Elige tu tiempo"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Elige tu tiempo",
+                                      "quickReplies": time_slotshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                              else if(language==='fr'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": "Choisissez votre heure"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": "Choisissez votre heure",
+                                      "quickReplies": time_slotshin
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": timelist
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
                                 
                                 }
                         }
@@ -2753,6 +5297,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = '30 मिनट के अंतराल में समय दर्ज करें (पूर्व: सुबह 11:00 बजे, 11:30 बजे)\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Geben Sie die Zeit im Abstand von 30 Minuten ein (Beispiel: 11:00 Uhr, 11:30 Uhr).\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Ingrese el tiempo en el intervalo de 30 minutos (Ej .: 11:00 am, 11:30 am)\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Entrez l'heure dans un intervalle de 30 minutes (Ex: 11h00, 11h30)\n"
+                      }
                         response.send({
                             fulfillmentText: fulfillmentText
                         })
@@ -2765,6 +5318,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते।\nउचित समय दर्ज करें (नई तारीख डालकर आप अपनी तारीख भी बदल सकते हैं)\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen. \n Geben Sie die entsprechende Uhrzeit ein (Sie können Ihr Datum auch ändern, indem Sie ein neues Datum eingeben.)\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'No puede reservar una cita por menos de 24 horas. \n Ingrese el tiempo apropiado (También puede cambiar su fecha ingresando una nueva fecha) \n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = "Vous ne pouvez pas prendre de rendez-vous pour moins de 24 heures.\n Entrez l'heure appropriée (vous pouvez également modifier votre date en entrant une nouvelle date)\n"
+                  }
                     response.send({
                         fulfillmentText: fulfillmentText
                     })
@@ -2776,6 +5338,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               }
               else if(language==='hi'){
                 fulfillmentText = 'चयनित समय सुबह 10:00 बजे और शाम 7:00 बजे तक नहीं है। मान्य समय दर्ज करें\n'
+              }
+              else if(language==='de'){
+                fulfillmentText = 'Die ausgewählte Zeit ist nicht innerhalb von 10:00 Uhr und 19:00 Uhr. Geben Sie eine gültige Zeit ein\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'La hora seleccionada no es dentro de las 10:00 a.m. y las 7:00 p.m. Ingrese hora válida\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "L'heure sélectionnée n'est pas entre 10h00 et 19h00. Entrez une heure valide\n"
               }
                 response.send({
                     fulfillmentText: fulfillmentText
@@ -2824,6 +5395,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                   else if(language==='hi'){
                     fulfillmentText = 'आप '+getHindi[params['doctor']]+' के साथ '+params['date']+' को '+getHindi[params['time']]+' अपॉइंटमेंट बुक करना चाहते हैं\nहाँ या नहीं दर्ज करें\n'
+                  }
+                  else if(language==='de'){
+                    fulfillmentText = 'Sie möchten einen Termin mit '+ params['doctor'] +' am '+ params['date'] +' beim '+ getGerman[params['time']] +' \nGeben Sie ein, um zu bestätigen, dass Sie sonst nein eingeben\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\nIngrese sí para confirmar, ingrese no\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\nEntrez oui pour confirmer sinon entrez non\n'
                   }
                     success = true
                             if(success){
@@ -2905,6 +5485,123 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                   }
                                 ]
                               }
+                              else if(language==='de'){
+                                fulfillmentMessages = [
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "simpleResponses": {
+                                      "simpleResponses": [
+                                        {
+                                          "textToSpeech": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n'
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "quickReplies": {
+                                      "title": 'Sie möchten einen Termin mit buchen '+params['doctor']+' auf '+params['date']+' beim '+getGerman[params['time']]+'\n',
+                                      "quickReplies": ['Ja', 'Nein']
+                                    },
+                                    "platform": "FACEBOOK"
+                                  },
+                                  {
+                                    "platform": "ACTIONS_ON_GOOGLE",
+                                    "suggestions": {
+                                      "suggestions": [{
+                                          'title':'Ja'
+                                      },
+                                      {
+                                          'title':'Nein'
+                                      }]
+                                    }
+                                  },
+                                  {
+                                    "text": {
+                                      "text": [
+                                        fulfillmentText
+                                      ]
+                                    }
+                                  }
+                                ]
+                                }
+                                else if(language==='es'){
+                                  fulfillmentMessages = [
+                                    {
+                                      "platform": "ACTIONS_ON_GOOGLE",
+                                      "simpleResponses": {
+                                        "simpleResponses": [
+                                          {
+                                            "textToSpeech": 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\n'
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "quickReplies": {
+                                        "title": 'Ningún médico disponible el '+params['doctor']+'en'+params['date']+'a las'+getSpanish[params['time']]+'\n',
+                                        "quickReplies": ['Si', 'No']
+                                      },
+                                      "platform": "FACEBOOK"
+                                    },
+                                    {
+                                      "platform": "ACTIONS_ON_GOOGLE",
+                                      "suggestions": {
+                                        "suggestions": [{
+                                            'title':'Si'
+                                        },
+                                        {
+                                            'title':'No'
+                                        }]
+                                      }
+                                    },
+                                    {
+                                      "text": {
+                                        "text": [
+                                          fulfillmentText
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                                else if(language==='fr'){
+                                  fulfillmentMessages = [
+                                    {
+                                      "platform": "ACTIONS_ON_GOOGLE",
+                                      "simpleResponses": {
+                                        "simpleResponses": [
+                                          {
+                                            "textToSpeech": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n'
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "quickReplies": {
+                                        "title": 'Vous souhaitez prendre rendez-vous avec '+ params['doctor'] +' le '+ params['date'] +' à '+ getFrench[params['time']] +'\n',
+                                        "quickReplies": ['Oui', 'Non']
+                                      },
+                                      "platform": "FACEBOOK"
+                                    },
+                                    {
+                                      "platform": "ACTIONS_ON_GOOGLE",
+                                      "suggestions": {
+                                        "suggestions": [{
+                                            'title':'Oui'
+                                        },
+                                        {
+                                            'title':'Non'
+                                        }]
+                                      }
+                                    },
+                                    {
+                                      "text": {
+                                        "text": [
+                                          fulfillmentText
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
                                 }
                 }
                 else{
@@ -2915,6 +5612,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language==='hi'){
                         fulfillmentText = params['date']+' पहले से ही बुक किया गया है नीचे उपलब्ध दिनांक में से चुनें:\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = params['date']+' ist bereits gebucht wählen Sie aus verfügbaren Daten unten:\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = params['date']+' ya está reservado, elija entre las fechas disponibles a continuación:\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = params['date']+ 'est déjà réservé choisissez parmi les dates disponibles ci-dessous:\n'
+                      }
                         
                         success = true
                     }
@@ -2924,6 +5630,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                       else if(language==='hi'){
                         fulfillmentText = 'आप केवल अगले 7 दिनों के लिए अपॉइंटमेंट बुक कर सकते हैं\nनीचे से मान्य दिनांक दर्ज करें:\n'
+                      }
+                      else if(language==='de'){
+                        fulfillmentText = 'Sie können Termine nur für die nächsten 7 Tage buchen \nGeben Sie das gültige Datum von unten ein:\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'Puede reservar citas solo para los próximos 7 días\nIngrese una fecha válida desde abajo:\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = 'Vous ne pouvez prendre rendez-vous que pour les 7 prochains jours\nEntrez une date valide ci-dessous:\n'
                       }
                         
                     }
@@ -3002,6 +5717,108 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                     ]
                   }
+                  else if(language==='de'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Wählen Sie Ihr Datum"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Wählen Sie Ihr Datum",
+                          "quickReplies": availdates
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                  else if(language==='es'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Elige tu fecha"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Elige tu fecha",
+                          "quickReplies": availdates
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                  else if(language==='fr'){
+                    fulfillmentMessages = [
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Choisissez votre date"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "quickReplies": {
+                          "title": "Choisissez votre date",
+                          "quickReplies": availdates
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": timelist
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]	
+                  }
                     
                     }
             
@@ -3023,6 +5840,16 @@ exports.webhook = functions.https.onRequest((request, response) => {
           }
           else if(language==='hi'){
             fulfillmentText = 'आप 24 घंटे से कम समय के लिए नियुक्ति नहीं कर सकते।\nउचित दिनांक दर्ज करें'
+          }
+          else if(language==='de'){
+            fulfillmentText = 'Sie können keinen Termin für weniger als 24 Stunden buchen. \nGeben Sie das entsprechende Datum ein\n'
+          }
+          else if(language==='es'){
+            fulfillmentText = 'No puede reservar una cita por menos de 24 horas..\n Ingrese la fecha apropiada\n'
+
+          }
+          else if(language==='fr'){
+            fulfillmentText = 'Vous ne pouvez pas prendre rendez-vous pour moins de 24 heures.\n Entrez la date appropriée\n'
           }
             response.send({
                 fulfillmentText: fulfillmentText
@@ -3067,6 +5894,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
               else if(language==='hi'){
                 fulfillmentText = 'OTP '+number+' पर भेजा जाता है\n OTP दर्ज करें('+otp+')\n'
               }
+              else if(language==='de'){
+                fulfillmentText = 'OTP wird an gesendet '+number+'\n Geben Sie das OTP ein('+otp+')\n'
+              }
+              else if(language==='es'){
+                fulfillmentText = 'OTP se envía a '+ number+' \n ingrese la OTP ('+ otp +')\n'
+              }
+              else if(language==='fr'){
+                fulfillmentText = "OTP est envoyé à '+ number +'\n entrez l' OTP ("+ otp +")\n"
+              }
               response.send({
                 fulfillmentText: fulfillmentText
               });
@@ -3101,6 +5937,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                 else if(language==='hi'){
                   fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
                 }
+                else if(language==='de'){
+                  fulfillmentText = 'Falsches OTP Geben Sie ein gültiges OTP ein\n'
+                }
+                else if(language==='es'){
+                  fulfillmentText = 'OTP incorrecto Ingrese una OTP vaild\n'
+                }
+                else if(language==='fr'){
+                  fulfillmentText = 'OTP incorrect Entrez un OTP vaild\n'
+                }
                 response.send({
                   fulfillmentText : fulfillmentText
                 })
@@ -3120,6 +5965,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                     else if(language === 'hi'){
                       fulfillmentText = 'आपकी नियुक्ति सफल है!\n'
                     }
+                    else if(language==='de'){
+                      fulfillmentText = 'Ihr Termin ist erfolgreich!\n'
+                    }
+                    else if(language==='es'){
+                      fulfillmentText = 'Su cita es exitosa!\n'
+                    }
+                    else if(language==='fr'){
+                      fulfillmentText = 'Votre rendez-vous est réussi!\n'
+                    }
                     success = true
                 }  
                 else{
@@ -3128,6 +5982,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   }
                   else if(language === 'hi'){
                     fulfillmentText = 'नियुक्ति असफल\n'
+                  }
+                  else if(language==='de'){
+                    fulfillmentText = 'Fehler beim Buchungstermin\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'Error en la cita de reserva\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'Erreur lors de la réservation du rendez-vous\n'
                   }
                     
                 }
@@ -3243,6 +6106,173 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       }
                     ]
                   }
+                  else if(language==='de'){
+                    fulfillmentMessages = [
+                      
+                      {
+                        "quickReplies": {
+                          "title": fulfillmentText+"Mögen Sie fortfahren?",
+                          "quickReplies": [
+                            "Ja",
+                            "Nein"
+                          ]
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": fulfillmentText
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Mögen Sie fortfahren?"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": [
+                            {
+                              "title": "Ja"
+                            },
+                            {
+                              "title": "Nein"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+
+                  }
+                  else if(language==='es'){
+                    fulfillmentMessages = [
+                      
+                      {
+                        "quickReplies": {
+                          "title": fulfillmentText+"¿Te gusta continuar?",
+                          "quickReplies": [
+                            "Si",
+                            "No"
+                          ]
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": fulfillmentText
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "¿Te gusta continuar?"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": [
+                            {
+                              "title": "Si"
+                            },
+                            {
+                              "title": "No"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]
+
+                  }
+                  else if(language==='fr'){
+                    fulfillmentMessages = [
+                      
+                      {
+                        "quickReplies": {
+                          "title": fulfillmentText+"Aimez-vous continuer",
+                          "quickReplies": [
+                            "Oui",
+                            "Non"
+                          ]
+                        },
+                        "platform": "FACEBOOK"
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": fulfillmentText
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "simpleResponses": {
+                          "simpleResponses": [
+                            {
+                              "textToSpeech": "Aimez-vous continuer"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "platform": "ACTIONS_ON_GOOGLE",
+                        "suggestions": {
+                          "suggestions": [
+                            {
+                              "title": "Oui"
+                            },
+                            {
+                              "title": "Non"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "text": {
+                          "text": [
+                            fulfillmentText
+                          ]
+                        }
+                      }
+                    ]	
+                  }
                 
                   
             }  
@@ -3273,6 +6303,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Falsches OTP Geben Sie ein gültiges OTP ein\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'OTP incorrecto Ingrese una OTP vaild\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'OTP incorrect Entrez un OTP vaild\n'
+                  }
                   response.send({
                     fulfillmentText : fulfillmentText
                   })
@@ -3291,6 +6330,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                       else if(language === 'hi'){
                         fulfillmentText = 'आपने कोई अपॉइंटमेंट बुक नहीं किया है\n'
                       }
+                      else if(language==='de'){
+                        fulfillmentText = 'Sie haben keine Termine gebucht\n'
+                      }
+                      else if(language==='es'){
+                        fulfillmentText = 'No ha reservado ninguna cita.\n'
+                      }
+                      else if(language==='fr'){
+                        fulfillmentText = "Vous n'avez pris aucun rendez-vous\n"
+                      }
                         
                     }  
                     else{
@@ -3302,6 +6350,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         else if(language === 'hi'){
                           fulfillmentText = 'आपकी नियुक्तियाँ\n'
                         }
+                        else if(language==='de'){
+                          fulfillmentText = 'Sie haben folgende Termine vereinbart:\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText = 'Has tomado las siguientes citas:\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText = 'Vous avez pris les rendez-vous suivants:\n'
+                          }
                         
                         appointments.forEach((appointment)=>{
                           if(language === 'en'){
@@ -3309,6 +6366,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                           else if(language === 'hi'){
                             fulfillmentText += getHindi[appointment['doctor']]+' के साथ '+appointment['date']+' को '+getHindi[appointment['time']]+'\n'
+                          }
+                          else if(language==='de'){
+                            fulfillmentText += 'Termin mit '+appointment['doctor']+' auf '+appointment['date']+' beim '+getGerman[appointment['time']]+'\n'
+                          }
+                          else if(language==='es'){
+                            fulfillmentText += 'Cita con '+appointment['doctor']+' en '+appointment['date']+'a las'+getSpanish[appointment['time']]+'\n'
+                          }
+                          else if(language==='fr'){
+                            fulfillmentText += 'Rendez-vous avec '+ appointment['doctor'] +' le '+appointment['date']+' à '+getFrench[appointment['time']] +'\n'
                           }
                             
                         })
@@ -3439,6 +6505,192 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                         ]
                       }
+                      else if(language==='de'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "Mögen Sie fortfahren?",
+                              "quickReplies": [
+                                "Ja",
+                                "Nein"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "Mögen Sie fortfahren?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Ja"
+                                },
+                                {
+                                  "title": "Nein"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      else if(language==='es'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "¿Te gusta continuar?",
+                              "quickReplies": [
+                                "Si",
+                                "No"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "¿Te gusta continuar?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Si"
+                                },
+                                {
+                                  "title": "No"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      else if(language==='fr'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "Aimez-vous continuer",
+                              "quickReplies": [
+                                "Oui",
+                                "Non"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "Aimez-vous continuer"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Oui"
+                                },
+                                {
+                                  "title": "Non"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     }  
                     response.send({
                         fulfillmentText: fulfillmentText,
@@ -3473,6 +6725,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                   else if(language==='hi'){
                     fulfillmentText = 'गलत OTP एक वैध OTP दर्ज करें\n'
                   }
+                  else if(language==='de'){
+                    fulfillmentText = 'Falsches OTP Geben Sie ein gültiges OTP ein\n'
+                  }
+                  else if(language==='es'){
+                    fulfillmentText = 'OTP incorrecto Ingrese una OTP vaild\n'
+                  }
+                  else if(language==='fr'){
+                    fulfillmentText = 'OTP incorrect Entrez un OTP vaild\n'
+                  }
                   response.send({
                     fulfillmentText : fulfillmentText
                   })
@@ -3493,6 +6754,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         else if(language === 'hi'){
                           fulfillmentText = params['date']+' '+getHindi[params['time']]+' तक कोई नियुक्ति नहीं है\n';
                         }
+                        else if(language==='de'){
+                          fulfillmentText = 'Es ist kein Termin festgelegt '+params['date']+' beim '+getGerman[params['time']]+'\n';
+                        }
+                        else if(language==='es'){
+                          fulfillmentText = 'No hay una cita establecida en '+params['date']+'a las'+getSpanish[params['time']]+'\n';
+                        }
+                        else if(language==='fr'){
+                          fulfillmentText = "Il n'y a pas de rendez-vous défini sur "+ params['date'] +' à '+ getFrench[params['time']] +'\n';
+                        }
                         
                     
                     }  
@@ -3504,6 +6774,15 @@ exports.webhook = functions.https.onRequest((request, response) => {
                         }
                         else if(language === 'hi'){
                           fulfillmentText = getHindi[params['time']]+' '+params['date']+' पर आपकी नियुक्ति सफलतापूर्वक रद्द कर दी गई है\nयदि आप चाहें तो एक नई नियुक्ति का पुनर्निर्धारण करें\n'
+                        }
+                        else if(language==='de'){
+                          fulfillmentText =  'Ihr Termin am '+params['date']+' beim '+getGerman[params['time']]+' wurde erfolgreich abgesagt \nBitte vereinbaren Sie einen neuen Termin, wenn Sie dies wünschen!\n';
+                        }
+                        else if(language==='es'){
+                          fulfillmentText =  'Su cita en '+params['date']+'a las'+getSpanish[params['time']]+' ha sido cancelado con éxito\n¡Por favor reprograme una nueva cita si lo desea!\n';
+                        }
+                        else if(language==='fr'){
+                          fulfillmentText =  'Votre rendez-vous le '+ params['date'] +' à '+ getFrench[params ['time']] +' a été annulé avec succès\nVeuillez reprogrammer un nouveau rendez-vous si vous le souhaitez!\n';
                         }
                         
                     });
@@ -3572,7 +6851,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
                           }
                         ]
                       }
-                      if(language === 'hi'){
+                      else if(language === 'hi'){
                         fulfillmentMessages = [
                           {
                             "text": {
@@ -3621,6 +6900,192 @@ exports.webhook = functions.https.onRequest((request, response) => {
                                 },
                                 {
                                   "title": "नहीं"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      else if(language==='de'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "Mögen Sie fortfahren?",
+                              "quickReplies": [
+                                "Ja",
+                                "Nein"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "Mögen Sie fortfahren?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Ja"
+                                },
+                                {
+                                  "title": "Nein"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      else if(language==='es'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "¿Te gusta continuar?",
+                              "quickReplies": [
+                                "Si",
+                                "No"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "¿Te gusta continuar?"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Si"
+                                },
+                                {
+                                  "title": "No"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                      else if(language==='fr'){
+                        fulfillmentMessages = [
+                          {
+                            "text": {
+                              "text": [
+                                fulfillmentText
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "quickReplies": {
+                              "title": "Aimez-vous continuer",
+                              "quickReplies": [
+                                "Oui",
+                                "Non"
+                              ]
+                            },
+                            "platform": "FACEBOOK"
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": fulfillmentText
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "simpleResponses": {
+                              "simpleResponses": [
+                                {
+                                  "textToSpeech": "Aimez-vous continuer"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "platform": "ACTIONS_ON_GOOGLE",
+                            "suggestions": {
+                              "suggestions": [
+                                {
+                                  "title": "Oui"
+                                },
+                                {
+                                  "title": "Non"
                                 }
                               ]
                             }
