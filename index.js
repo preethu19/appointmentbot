@@ -30,21 +30,21 @@ exports.webhook = functions.https.onRequest((request, response) => {
 //     experience : 25
 //     },
 //     {
-//     name: "Dr. Padmini Bhattacharya ",
+//     name: "Dr. Padmini Bhattacharya",
 //     rating: 5,
 //     languages: ["english"],
 //     specialization: "Audiologist",
 //     experience : 17
 //     },
 //     {
-//     name: "Dr. Shruti Seth ",
+//     name: "Dr. Shruti Seth",
 //     rating: 4,
 //     languages: ["english", "hindi"],
 //     specialization: "Allergist",
 //     experience : 23
 //     },
 //     {
-//     name: "Dr. Aman Ranganekary ",
+//     name: "Dr. Aman Ranganekary",
 //     rating: 1.5,
 //     languages: ["english", "hindi"],
 //     specialization: "Allergist",
@@ -58,7 +58,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
 //     experience : 12
 //     },
 //     {
-//     name: "Dr. Ashia Mirchandani ",
+//     name: "Dr. Ashia Mirchandani",
 //     rating: 3,
 //     languages: ["english", "hindi"],
 //     specialization: "Anesthesiologist",
@@ -72,14 +72,14 @@ exports.webhook = functions.https.onRequest((request, response) => {
 //     experience : 17
 //     },
 //     {
-//     name: "Dr. Kusika Munshi ",
+//     name: "Dr. Kusika Munshi",
 //     rating: 4.5,
 //     languages: ["english", "hindi"],
 //     specialization: "Anesthesiologist",
 //     experience : 4
 //     },
 //     {
-//     name: "Dr. Ayush Vad ",
+//     name: "Dr. Ayush Vad",
 //     rating: 3.5,
 //     languages: ["english", "hindi"],
 //     specialization: "Cardiologist",
@@ -163,7 +163,7 @@ exports.webhook = functions.https.onRequest((request, response) => {
 //     experience : 6
 //     },
 //     {
-//     name: "Dr. Dakini Kapadia ",
+//     name: "Dr. Dakini Kapadia",
 //     rating: 1.5,
 //     languages: ["english"],
 //     specialization: "Epidemiologist",
